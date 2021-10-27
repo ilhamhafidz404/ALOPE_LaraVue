@@ -24,6 +24,28 @@ Vue.component(
     "header-component",
     require("./components/HeaderComponent.vue").default
 );
+
+Vue.component(
+    "glider-component",
+    require("./components/GliderComponent.vue").default
+);
+Vue.component(
+    "testimoni-component",
+    require("./components/TestimoniComponent.vue").default
+);
+Vue.component(
+    "blogcard-component",
+    require("./components/card/BlogCardComponent.vue").default
+);
+Vue.component(
+    "videocard-component",
+    require("./components/card/VideoCardComponent.vue").default
+);
+Vue.component(
+    "seriecard-component",
+    require("./components/card/SerieCardComponent.vue").default
+);
+
 Vue.component(
     "footer-component",
     require("./components/FooterComponent.vue").default

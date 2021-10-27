@@ -1,0 +1,36 @@
+<template>
+    <div class="col-md-4 mb-4">
+        <a href="">
+            <div class="card shadow-sm">
+                <div class="blog-serie w-100" style="background-image: "></div>
+                <div class="card-body pt-1">
+                    <small class="text-muted"> fsaf </small>
+                    <h5 class="card-title mb-4 text-dark mt-0">sfsafsaf</h5>
+                    <div
+                        class="
+                            d-flex
+                            align-items-center
+                            justify-content-between
+                        "
+                    >
+                        <div>
+                            <img
+                                src=""
+                                alt="grgrg"
+                                class="rounded-circle writer-img"
+                            />
+                            <small class="text-muted ms-2"> grgeg </small>
+                        </div>
+                        <small class="text-muted"> gregregreg </small>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style></style>

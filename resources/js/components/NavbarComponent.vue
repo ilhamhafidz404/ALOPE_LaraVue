@@ -19,19 +19,29 @@
                 <ul class="navbar-nav ms-auto">
                     <!-- @auth -->
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Beranda</a>
+                        <router-link class="nav-link" exact to="/"
+                            >Beranda</router-link
+                        >
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Blog</a>
+                        <router-link class="nav-link" :to="{ name: 'blog' }">
+                            Blog
+                        </router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Video</a>
+                        <router-link class="nav-link" :to="{ name: 'video' }">
+                            Video
+                        </router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Serie</a>
+                        <router-link class="nav-link" :to="{ name: 'serie' }">
+                            Serie
+                        </router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Topic</a>
+                        <router-link class="nav-link" :to="{ name: 'topic' }">
+                            Topic
+                        </router-link>
                     </li>
                     <li class="nav-item dropdown ms-3">
                         <a
