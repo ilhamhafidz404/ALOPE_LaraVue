@@ -6,153 +6,12 @@
                 <div class="container-fluid">
                     <h3 class="mb-4 text-center text-uppercase">Serie</h3>
                     <div class="row">
-                        <div class="col-md-6 col-lg-4">
-                            <a href="">
-                                <div
-                                    class="
-                                        card
-                                        border-0
-                                        bg-transparent
-                                        m-auto
-                                        mb-4
-                                    "
-                                    style="width: 90% !important"
-                                >
-                                    <img
-                                        src=""
-                                        class="card-img-rounded"
-                                        width="100%"
-                                        height="201px"
-                                    />
-                                    <div class="card-body">
-                                        <span
-                                            class="badge"
-                                            style="background-color: red"
-                                        >
-                                            asdf
-                                        </span>
-                                        <h4 class="card-title my-2 text-dark">
-                                            fewfe
-                                        </h4>
-                                        <div
-                                            class="
-                                                card-text
-                                                d-flex
-                                                justify-content-between
-                                            "
-                                        >
-                                            <small class="text-muted">
-                                                2 Hari yang lalu
-                                            </small>
-                                            <small class="text-secondary"
-                                                >Serie<span
-                                                    class="text-success fw-bold"
-                                                    >Complete</span
-                                                ></small
-                                            >
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <a href="">
-                                <div
-                                    class="
-                                        card
-                                        border-0
-                                        bg-transparent
-                                        m-auto
-                                        mb-4
-                                    "
-                                    style="width: 90% !important"
-                                >
-                                    <img
-                                        src=""
-                                        class="card-img-rounded"
-                                        width="100%"
-                                        height="201px"
-                                    />
-                                    <div class="card-body">
-                                        <span
-                                            class="badge"
-                                            style="background-color: red"
-                                        >
-                                            asdf
-                                        </span>
-                                        <h4 class="card-title my-2 text-dark">
-                                            fewfe
-                                        </h4>
-                                        <div
-                                            class="
-                                                card-text
-                                                d-flex
-                                                justify-content-between
-                                            "
-                                        >
-                                            <small class="text-muted">
-                                                2 Hari yang lalu
-                                            </small>
-                                            <small class="text-secondary"
-                                                >Serie<span
-                                                    class="text-success fw-bold"
-                                                    >Complete</span
-                                                ></small
-                                            >
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <a href="">
-                                <div
-                                    class="
-                                        card
-                                        border-0
-                                        bg-transparent
-                                        m-auto
-                                        mb-4
-                                    "
-                                    style="width: 90% !important"
-                                >
-                                    <img
-                                        src=""
-                                        class="card-img-rounded"
-                                        width="100%"
-                                        height="201px"
-                                    />
-                                    <div class="card-body">
-                                        <span
-                                            class="badge"
-                                            style="background-color: red"
-                                        >
-                                            asdf
-                                        </span>
-                                        <h4 class="card-title my-2 text-dark">
-                                            fewfe
-                                        </h4>
-                                        <div
-                                            class="
-                                                card-text
-                                                d-flex
-                                                justify-content-between
-                                            "
-                                        >
-                                            <small class="text-muted">
-                                                2 Hari yang lalu
-                                            </small>
-                                            <small class="text-secondary"
-                                                >Serie<span
-                                                    class="text-success fw-bold"
-                                                    >Complete</span
-                                                ></small
-                                            >
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                        <seriecard-component
+                            v-for="serie in series"
+                            :key="serie.slug"
+                            :name="serie.name"
+                            :created_at="serie.created_at"
+                        ></seriecard-component>
                     </div>
                 </div>
             </div>
@@ -519,7 +378,19 @@
 </template>
 
 <script>
-export default {};
+export default {
+    data() {
+        return {
+            series: [],
+        };
+    },
+
+    mounted() {
+        axios.get("/api/serie").then((response) => {
+            this.series = response.data.data;
+        });
+    },
+};
 </script>
 
 <style></style>

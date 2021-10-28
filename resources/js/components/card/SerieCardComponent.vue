@@ -12,9 +12,9 @@
                     <span class="badge" style="background-color: red">
                         tag
                     </span>
-                    <h4 class="card-title my-2 text-dark">Serie</h4>
+                    <h4 class="card-title my-2 text-dark">{{ name }}</h4>
                     <div class="card-text d-flex justify-content-between">
-                        <small class="text-muted"> 10 hari yang lalu </small>
+                        <small class="text-muted">{{ created_at }}</small>
                         <small class="text-secondary">
                             Serie
                             <span class="text-success fw-bold">Complete</span>
@@ -27,7 +27,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+    props: ["name", "created_at"],
+};
 </script>
 
 <style></style>

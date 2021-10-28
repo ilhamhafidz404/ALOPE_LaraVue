@@ -4,8 +4,8 @@
             <div class="card shadow-sm">
                 <div class="blog-serie w-100" style="background-image: "></div>
                 <div class="card-body pt-1">
-                    <small class="text-muted"> fsaf </small>
-                    <h5 class="card-title mb-4 text-dark mt-0">sfsafsaf</h5>
+                    <small class="text-muted"> Category </small>
+                    <h5 class="card-title mb-4 text-dark mt-0">{{ title }}</h5>
                     <div
                         class="
                             d-flex
@@ -19,9 +19,9 @@
                                 alt="grgrg"
                                 class="rounded-circle writer-img"
                             />
-                            <small class="text-muted ms-2"> grgeg </small>
+                            <small class="text-muted ms-2"> Admin </small>
                         </div>
-                        <small class="text-muted"> gregregreg </small>
+                        <small class="text-muted"> {{ created_at }} </small>
                     </div>
                 </div>
             </div>
@@ -30,7 +30,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+    props: ["title", "created_at"],
+};
 </script>
 
 <style></style>

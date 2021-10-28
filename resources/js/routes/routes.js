@@ -8,8 +8,8 @@ export default {
     linkActiveClass: "active fw-bold",
 
     routes: [
-        { path: "/", name: "home", component: Home },
-        { path: "/blog", name: "blog", component: Blog },
+        { path: "/", name: "home", component: Home, props: true },
+        { path: "/blog", name: "blog", component: Blog, props: true },
         { path: "/video", name: "video", component: Video },
         { path: "/serie", name: "serie", component: Serie },
         { path: "/topic", name: "topic", component: Topic },

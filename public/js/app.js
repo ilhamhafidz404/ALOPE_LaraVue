@@ -6144,7 +6144,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ["title", "created_at"]
+});
 
 /***/ }),
 
@@ -6187,7 +6189,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ["name", "created_at"]
+});
 
 /***/ }),
 
@@ -6320,7 +6324,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      notes: []
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    axios.get("api/article").then(function (response) {
+      _this.notes = response.data.data;
+    });
+  }
+});
 
 /***/ }),
 
@@ -6714,148 +6734,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      series: []
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    axios.get("/api/serie").then(function (response) {
+      _this.series = response.data.data;
+    });
+  }
+});
 
 /***/ }),
 
@@ -7185,11 +7077,13 @@ __webpack_require__.r(__webpack_exports__);
   routes: [{
     path: "/",
     name: "home",
-    component: _views_Home__WEBPACK_IMPORTED_MODULE_0__["default"]
+    component: _views_Home__WEBPACK_IMPORTED_MODULE_0__["default"],
+    props: true
   }, {
     path: "/blog",
     name: "blog",
-    component: _views_Blog__WEBPACK_IMPORTED_MODULE_1__["default"]
+    component: _views_Blog__WEBPACK_IMPORTED_MODULE_1__["default"],
+    props: true
   }, {
     path: "/video",
     name: "video",
@@ -23126,10 +23020,10 @@ return jQuery;
 
 /***/ }),
 
-/***/ "./resources/sass/app.scss":
-/*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
-  \*********************************/
+/***/ "./resources/sass/style.sass":
+/*!***********************************!*\
+  !*** ./resources/sass/style.sass ***!
+  \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -28116,54 +28010,52 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "col-md-4 mb-4" }, [
+    _c("a", { attrs: { href: "" } }, [
+      _c("div", { staticClass: "card shadow-sm" }, [
+        _c("div", {
+          staticClass: "blog-serie w-100",
+          staticStyle: { "background-image": "" },
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-body pt-1" }, [
+          _c("small", { staticClass: "text-muted" }, [_vm._v(" Category ")]),
+          _vm._v(" "),
+          _c("h5", { staticClass: "card-title mb-4 text-dark mt-0" }, [
+            _vm._v(_vm._s(_vm.title)),
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "\n                        d-flex\n                        align-items-center\n                        justify-content-between\n                    ",
+            },
+            [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("small", { staticClass: "text-muted" }, [
+                _vm._v(" " + _vm._s(_vm.created_at) + " "),
+              ]),
+            ]
+          ),
+        ]),
+      ]),
+    ]),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-4 mb-4" }, [
-      _c("a", { attrs: { href: "" } }, [
-        _c("div", { staticClass: "card shadow-sm" }, [
-          _c("div", {
-            staticClass: "blog-serie w-100",
-            staticStyle: { "background-image": "" },
-          }),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body pt-1" }, [
-            _c("small", { staticClass: "text-muted" }, [_vm._v(" fsaf ")]),
-            _vm._v(" "),
-            _c("h5", { staticClass: "card-title mb-4 text-dark mt-0" }, [
-              _vm._v("sfsafsaf"),
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "\n                        d-flex\n                        align-items-center\n                        justify-content-between\n                    ",
-              },
-              [
-                _c("div", [
-                  _c("img", {
-                    staticClass: "rounded-circle writer-img",
-                    attrs: { src: "", alt: "grgrg" },
-                  }),
-                  _vm._v(" "),
-                  _c("small", { staticClass: "text-muted ms-2" }, [
-                    _vm._v(" grgeg "),
-                  ]),
-                ]),
-                _vm._v(" "),
-                _c("small", { staticClass: "text-muted" }, [
-                  _vm._v(" gregregreg "),
-                ]),
-              ]
-            ),
-          ]),
-        ]),
-      ]),
+    return _c("div", [
+      _c("img", {
+        staticClass: "rounded-circle writer-img",
+        attrs: { src: "", alt: "grgrg" },
+      }),
+      _vm._v(" "),
+      _c("small", { staticClass: "text-muted ms-2" }, [_vm._v(" Admin ")]),
     ])
   },
 ]
@@ -28189,60 +28081,56 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "col-sm-12 col-md-6 col-lg-4" }, [
+    _c("a", { attrs: { href: "" } }, [
+      _c(
+        "div",
+        { staticClass: "card border-0 bg-transparent px-1 m-auto mb-4" },
+        [
+          _c("img", {
+            staticClass: "card-img-rounded",
+            attrs: { src: "", width: "100%", height: "201px" },
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body p-0 mt-1" }, [
+            _c(
+              "span",
+              {
+                staticClass: "badge",
+                staticStyle: { "background-color": "red" },
+              },
+              [_vm._v("\n                    tag\n                ")]
+            ),
+            _vm._v(" "),
+            _c("h4", { staticClass: "card-title my-2 text-dark" }, [
+              _vm._v(_vm._s(_vm.name)),
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "card-text d-flex justify-content-between" },
+              [
+                _c("small", { staticClass: "text-muted" }, [
+                  _vm._v(_vm._s(_vm.created_at)),
+                ]),
+                _vm._v(" "),
+                _vm._m(0),
+              ]
+            ),
+          ]),
+        ]
+      ),
+    ]),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-sm-12 col-md-6 col-lg-4" }, [
-      _c("a", { attrs: { href: "" } }, [
-        _c(
-          "div",
-          { staticClass: "card border-0 bg-transparent px-1 m-auto mb-4" },
-          [
-            _c("img", {
-              staticClass: "card-img-rounded",
-              attrs: { src: "", width: "100%", height: "201px" },
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body p-0 mt-1" }, [
-              _c(
-                "span",
-                {
-                  staticClass: "badge",
-                  staticStyle: { "background-color": "red" },
-                },
-                [_vm._v("\n                    tag\n                ")]
-              ),
-              _vm._v(" "),
-              _c("h4", { staticClass: "card-title my-2 text-dark" }, [
-                _vm._v("Serie"),
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "card-text d-flex justify-content-between" },
-                [
-                  _c("small", { staticClass: "text-muted" }, [
-                    _vm._v(" 10 hari yang lalu "),
-                  ]),
-                  _vm._v(" "),
-                  _c("small", { staticClass: "text-secondary" }, [
-                    _vm._v(
-                      "\n                        Serie\n                        "
-                    ),
-                    _c("span", { staticClass: "text-success fw-bold" }, [
-                      _vm._v("Complete"),
-                    ]),
-                  ]),
-                ]
-              ),
-            ]),
-          ]
-        ),
-      ]),
+    return _c("small", { staticClass: "text-secondary" }, [
+      _vm._v("\n                        Serie\n                        "),
+      _c("span", { staticClass: "text-success fw-bold" }, [_vm._v("Complete")]),
     ])
   },
 ]
@@ -28360,13 +28248,12 @@ var render = function () {
         _c(
           "div",
           { staticClass: "row mt-4" },
-          [
-            _c("blogcard-component"),
-            _vm._v(" "),
-            _c("blogcard-component"),
-            _vm._v(" "),
-            _c("blogcard-component"),
-          ],
+          _vm._l(_vm.notes, function (note) {
+            return _c("blogcard-component", {
+              key: note.slug,
+              attrs: { title: note.title, created_at: note.created_at },
+            })
+          }),
           1
         ),
       ]),
@@ -28463,20 +28350,38 @@ var render = function () {
         "main",
         { staticClass: "mt-5" },
         [
-          _vm._m(0),
+          _c("div", { staticClass: "album py-5" }, [
+            _c("div", { staticClass: "container-fluid" }, [
+              _c("h3", { staticClass: "mb-4 text-center text-uppercase" }, [
+                _vm._v("Serie"),
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "row" },
+                _vm._l(_vm.series, function (serie) {
+                  return _c("seriecard-component", {
+                    key: serie.slug,
+                    attrs: { name: serie.name, created_at: serie.created_at },
+                  })
+                }),
+                1
+              ),
+            ]),
+          ]),
           _vm._v(" "),
           _c("glider-component"),
           _vm._v(" "),
           _c("testimoni-component"),
           _vm._v(" "),
+          _vm._m(0),
+          _vm._v(" "),
+          _c("br"),
+          _c("br"),
+          _vm._v(" "),
           _vm._m(1),
           _vm._v(" "),
-          _c("br"),
-          _c("br"),
-          _vm._v(" "),
           _vm._m(2),
-          _vm._v(" "),
-          _vm._m(3),
         ],
         1
       ),
@@ -28495,206 +28400,6 @@ var render = function () {
   )
 }
 var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "album py-5" }, [
-      _c("div", { staticClass: "container-fluid" }, [
-        _c("h3", { staticClass: "mb-4 text-center text-uppercase" }, [
-          _vm._v("Serie"),
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-6 col-lg-4" }, [
-            _c("a", { attrs: { href: "" } }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "\n                                    card\n                                    border-0\n                                    bg-transparent\n                                    m-auto\n                                    mb-4\n                                ",
-                  staticStyle: { width: "90% !important" },
-                },
-                [
-                  _c("img", {
-                    staticClass: "card-img-rounded",
-                    attrs: { src: "", width: "100%", height: "201px" },
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body" }, [
-                    _c(
-                      "span",
-                      {
-                        staticClass: "badge",
-                        staticStyle: { "background-color": "red" },
-                      },
-                      [
-                        _vm._v(
-                          "\n                                        asdf\n                                    "
-                        ),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("h4", { staticClass: "card-title my-2 text-dark" }, [
-                      _vm._v(
-                        "\n                                        fewfe\n                                    "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "\n                                            card-text\n                                            d-flex\n                                            justify-content-between\n                                        ",
-                      },
-                      [
-                        _c("small", { staticClass: "text-muted" }, [
-                          _vm._v(
-                            "\n                                            2 Hari yang lalu\n                                        "
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("small", { staticClass: "text-secondary" }, [
-                          _vm._v("Serie"),
-                          _c("span", { staticClass: "text-success fw-bold" }, [
-                            _vm._v("Complete"),
-                          ]),
-                        ]),
-                      ]
-                    ),
-                  ]),
-                ]
-              ),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-6 col-lg-4" }, [
-            _c("a", { attrs: { href: "" } }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "\n                                    card\n                                    border-0\n                                    bg-transparent\n                                    m-auto\n                                    mb-4\n                                ",
-                  staticStyle: { width: "90% !important" },
-                },
-                [
-                  _c("img", {
-                    staticClass: "card-img-rounded",
-                    attrs: { src: "", width: "100%", height: "201px" },
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body" }, [
-                    _c(
-                      "span",
-                      {
-                        staticClass: "badge",
-                        staticStyle: { "background-color": "red" },
-                      },
-                      [
-                        _vm._v(
-                          "\n                                        asdf\n                                    "
-                        ),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("h4", { staticClass: "card-title my-2 text-dark" }, [
-                      _vm._v(
-                        "\n                                        fewfe\n                                    "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "\n                                            card-text\n                                            d-flex\n                                            justify-content-between\n                                        ",
-                      },
-                      [
-                        _c("small", { staticClass: "text-muted" }, [
-                          _vm._v(
-                            "\n                                            2 Hari yang lalu\n                                        "
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("small", { staticClass: "text-secondary" }, [
-                          _vm._v("Serie"),
-                          _c("span", { staticClass: "text-success fw-bold" }, [
-                            _vm._v("Complete"),
-                          ]),
-                        ]),
-                      ]
-                    ),
-                  ]),
-                ]
-              ),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-6 col-lg-4" }, [
-            _c("a", { attrs: { href: "" } }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "\n                                    card\n                                    border-0\n                                    bg-transparent\n                                    m-auto\n                                    mb-4\n                                ",
-                  staticStyle: { width: "90% !important" },
-                },
-                [
-                  _c("img", {
-                    staticClass: "card-img-rounded",
-                    attrs: { src: "", width: "100%", height: "201px" },
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body" }, [
-                    _c(
-                      "span",
-                      {
-                        staticClass: "badge",
-                        staticStyle: { "background-color": "red" },
-                      },
-                      [
-                        _vm._v(
-                          "\n                                        asdf\n                                    "
-                        ),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("h4", { staticClass: "card-title my-2 text-dark" }, [
-                      _vm._v(
-                        "\n                                        fewfe\n                                    "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "\n                                            card-text\n                                            d-flex\n                                            justify-content-between\n                                        ",
-                      },
-                      [
-                        _c("small", { staticClass: "text-muted" }, [
-                          _vm._v(
-                            "\n                                            2 Hari yang lalu\n                                        "
-                          ),
-                        ]),
-                        _vm._v(" "),
-                        _c("small", { staticClass: "text-secondary" }, [
-                          _vm._v("Serie"),
-                          _c("span", { staticClass: "text-success fw-bold" }, [
-                            _vm._v("Complete"),
-                          ]),
-                        ]),
-                      ]
-                    ),
-                  ]),
-                ]
-              ),
-            ]),
-          ]),
-        ]),
-      ]),
-    ])
-  },
   function () {
     var _vm = this
     var _h = _vm.$createElement
@@ -45022,7 +44727,7 @@ module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBun
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/app": 0,
-/******/ 			"css/app": 0
+/******/ 			"css/style": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -45072,8 +44777,8 @@ module.exports = JSON.parse('{"_from":"axios@^0.21","_id":"axios@0.21.4","_inBun
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/style"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/style"], () => (__webpack_require__("./resources/sass/style.sass")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

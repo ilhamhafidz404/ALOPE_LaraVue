@@ -48,9 +48,12 @@
         <div class="container-fluid series-content">
             <div class="card p-4 shadow position-relative">
                 <div class="row mt-4">
-                    <blogcard-component></blogcard-component>
-                    <blogcard-component></blogcard-component>
-                    <blogcard-component></blogcard-component>
+                    <blogcard-component
+                        v-for="note in notes"
+                        :key="note.slug"
+                        :title="note.title"
+                        :created_at="note.created_at"
+                    ></blogcard-component>
                 </div>
             </div>
         </div>
@@ -58,7 +61,19 @@
 </template>
 
 <script>
-export default {};
+export default {
+    data() {
+        return {
+            notes: [],
+        };
+    },
+
+    mounted() {
+        axios.get("api/article").then((response) => {
+            this.notes = response.data.data;
+        });
+    },
+};
 </script>
 
 <style></style>
