@@ -10,6 +10,8 @@
                             v-for="serie in series"
                             :key="serie.slug"
                             :name="serie.name"
+                            :status="serie.status"
+                            :tags="serie.tag"
                             :created_at="serie.created_at"
                         ></seriecard-component>
                     </div>

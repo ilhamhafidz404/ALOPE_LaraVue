@@ -9,8 +9,13 @@
                     height="201px"
                 />
                 <div class="card-body p-0 mt-1">
-                    <span class="badge" style="background-color: red">
-                        tag
+                    <span
+                        class="badge me-1"
+                        :style="'background-color:' + tag.color"
+                        v-for="tag in tags"
+                        :key="tag.slug"
+                    >
+                        {{ tag["name"] }}
                     </span>
                     <h4 class="card-title my-2 text-dark">{{ name }}</h4>
                     <div class="card-text d-flex justify-content-between">
@@ -37,7 +42,7 @@
 
 <script>
 export default {
-    props: ["name", "status", "created_at"],
+    props: ["name", "status", "tags", "created_at"],
 };
 </script>
 

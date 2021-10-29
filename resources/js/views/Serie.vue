@@ -53,6 +53,7 @@
                         v-for="serie in series"
                         :key="serie.slug"
                         :name="serie.name"
+                        :tags="serie.tag"
                         :status="serie.status"
                         :created_at="serie.created_at"
                     ></seriecard-component>

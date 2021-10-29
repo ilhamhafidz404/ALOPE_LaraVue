@@ -5977,8 +5977,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["name", "status", "created_at"]
+  props: ["name", "status", "tags", "created_at"]
 });
 
 /***/ }),
@@ -6533,6 +6538,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -6625,6 +6632,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -6653,6 +6661,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
 //
 //
 //
@@ -27652,54 +27661,68 @@ var render = function () {
             attrs: { src: "", width: "100%", height: "201px" },
           }),
           _vm._v(" "),
-          _c("div", { staticClass: "card-body p-0 mt-1" }, [
-            _c(
-              "span",
-              {
-                staticClass: "badge",
-                staticStyle: { "background-color": "red" },
-              },
-              [_vm._v("\n                    tag\n                ")]
-            ),
-            _vm._v(" "),
-            _c("h4", { staticClass: "card-title my-2 text-dark" }, [
-              _vm._v(_vm._s(_vm.name)),
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              { staticClass: "card-text d-flex justify-content-between" },
-              [
-                _c("small", { staticClass: "text-muted" }, [
-                  _vm._v(_vm._s(_vm.created_at)),
-                ]),
-                _vm._v(" "),
-                _c("small", { staticClass: "text-secondary" }, [
-                  _vm._v(
-                    "\n                        Serie\n                        "
-                  ),
-                  _c(
-                    "span",
-                    {
-                      staticClass: "fw-bold",
-                      class: {
-                        "text-danger": _vm.status === "stuck",
-                        "text-success": _vm.status === "complete",
-                        "text-warning": _vm.status === "development",
+          _c(
+            "div",
+            { staticClass: "card-body p-0 mt-1" },
+            [
+              _vm._l(_vm.tags, function (tag) {
+                return _c(
+                  "span",
+                  {
+                    key: tag.slug,
+                    staticClass: "badge me-1",
+                    style: "background-color:" + tag.color,
+                  },
+                  [
+                    _vm._v(
+                      "\n                    " +
+                        _vm._s(tag["name"]) +
+                        "\n                "
+                    ),
+                  ]
+                )
+              }),
+              _vm._v(" "),
+              _c("h4", { staticClass: "card-title my-2 text-dark" }, [
+                _vm._v(_vm._s(_vm.name)),
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "card-text d-flex justify-content-between" },
+                [
+                  _c("small", { staticClass: "text-muted" }, [
+                    _vm._v(_vm._s(_vm.created_at)),
+                  ]),
+                  _vm._v(" "),
+                  _c("small", { staticClass: "text-secondary" }, [
+                    _vm._v(
+                      "\n                        Serie\n                        "
+                    ),
+                    _c(
+                      "span",
+                      {
+                        staticClass: "fw-bold",
+                        class: {
+                          "text-danger": _vm.status === "stuck",
+                          "text-success": _vm.status === "complete",
+                          "text-warning": _vm.status === "development",
+                        },
                       },
-                    },
-                    [
-                      _vm._v(
-                        "\n                            " +
-                          _vm._s(_vm.status) +
-                          "\n                        "
-                      ),
-                    ]
-                  ),
-                ]),
-              ]
-            ),
-          ]),
+                      [
+                        _vm._v(
+                          "\n                            " +
+                            _vm._s(_vm.status) +
+                            "\n                        "
+                        ),
+                      ]
+                    ),
+                  ]),
+                ]
+              ),
+            ],
+            2
+          ),
         ]
       ),
     ]),
@@ -27950,7 +27973,12 @@ var render = function () {
                 _vm._l(_vm.series, function (serie) {
                   return _c("seriecard-component", {
                     key: serie.slug,
-                    attrs: { name: serie.name, created_at: serie.created_at },
+                    attrs: {
+                      name: serie.name,
+                      status: serie.status,
+                      tags: serie.tag,
+                      created_at: serie.created_at,
+                    },
                   })
                 }),
                 1
@@ -28558,6 +28586,7 @@ var render = function () {
               key: serie.slug,
               attrs: {
                 name: serie.name,
+                tags: serie.tag,
                 status: serie.status,
                 created_at: serie.created_at,
               },
@@ -28713,6 +28742,7 @@ var render = function () {
               attrs: {
                 name: serie.name,
                 status: serie.status,
+                tags: serie.tag,
                 created_at: serie.created_at,
               },
             })

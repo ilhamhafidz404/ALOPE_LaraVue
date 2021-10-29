@@ -10,6 +10,7 @@ class SerieController extends Controller
 {
     public function index(){
         $series= Serie::latest()->get();
+        
         return SerieResource::collection($series);
     }
 

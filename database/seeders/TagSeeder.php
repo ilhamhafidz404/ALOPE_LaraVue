@@ -31,7 +31,7 @@ class TagSeeder extends Seeder
                 'name' => 'Vue Js',
                 'slug' => 'vue-js',
                 'icon' => 'vuejs',
-                'color' => 'lihtgreen',
+                'color' => 'lightgreen',
             ],
         ]);
     }
