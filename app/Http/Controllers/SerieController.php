@@ -12,4 +12,8 @@ class SerieController extends Controller
         $series= Serie::latest()->get();
         return SerieResource::collection($series);
     }
+
+    public function topic(){
+    
+    }
 }

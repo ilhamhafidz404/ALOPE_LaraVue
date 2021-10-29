@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Article;
 use App\Models\Serie;
 use App\Models\Video;
+use Database\Seeders\TagSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -20,5 +21,6 @@ class DatabaseSeeder extends Seeder
         Article::factory(10)->create();
         Serie::factory(6)->create();
         Video::factory(10)->create();
+        $this->call(TagSeeder::class);
     }
 }

@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\SerieController;
 use App\Http\Controllers\VideoController;
+use App\Http\Controllers\TagController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,5 +26,7 @@ Route::get('/article', [ArticleController::class, 'index'])->name('article.index
 Route::get('/latest-article', [ArticleController::class, 'latest'])->name('article.latest');
 
 Route::get('/serie', [SerieController::class, 'index'])->name('serie.index');
+
+Route::get('/tag', TagController::class)->name('tag');
 
 Route::get('/video', [VideoController::class, 'index'])->name('video.index');

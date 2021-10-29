@@ -45,7 +45,11 @@
                         </small>
                         <form action="" class="mt-5">
                             <ul class="d-flex p-0">
-                                <li class="me-2">
+                                <li
+                                    class="me-2"
+                                    v-for="tag in tags"
+                                    :key="tag.slug"
+                                >
                                     <button
                                         class="
                                             btn btn-transparent btn-lg
@@ -56,18 +60,13 @@
                                             justify-content-center
                                             shadow-sm
                                         "
-                                        value="vr"
-                                        style="background-color: red !important"
+                                        :value="tag.slug"
+                                        :style="'background-color:' + tag.color"
                                         name="tag"
                                     >
                                         <i
-                                            class="
-                                                fab
-                                                fa-laravel
-                                                fs-2
-                                                fw-bold
-                                                text-white
-                                            "
+                                            class="fab fs-2 fw-bold text-white"
+                                            :class="'fa-' + tag.icon"
                                         ></i>
                                     </button>
                                 </li>
@@ -80,9 +79,13 @@
         <div class="container-fluid series-content">
             <div class="card p-4 shadow position-relative">
                 <div class="row mt-4">
-                    <seriecard-component></seriecard-component>
-                    <seriecard-component></seriecard-component>
-                    <seriecard-component></seriecard-component>
+                    <seriecard-component
+                        v-for="serie in series"
+                        :key="serie.slug"
+                        :name="serie.name"
+                        :status="serie.status"
+                        :created_at="serie.created_at"
+                    ></seriecard-component>
                 </div>
             </div>
         </div>
@@ -90,7 +93,22 @@
 </template>
 
 <script>
-export default {};
+export default {
+    data() {
+        return {
+            series: [],
+            tags: [],
+        };
+    },
+    mounted() {
+        axios.get("api/serie").then((response) => {
+            this.series = response.data.data;
+        });
+        axios.get("api/tag").then((response) => {
+            this.tags = response.data.data;
+        });
+    },
+};
 </script>
 
 <style></style>

@@ -6744,7 +6744,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      series: [],
+      tags: []
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    axios.get("api/serie").then(function (response) {
+      _this.series = response.data.data;
+    });
+    axios.get("api/tag").then(function (response) {
+      _this.tags = response.data.data;
+    });
+  }
+});
 
 /***/ }),
 
@@ -28631,20 +28651,72 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm._m(0),
+    _c(
+      "section",
+      { staticClass: "py-5 text-start header text-white position-relative" },
+      [
+        _c("div", { staticClass: "container-fluid pb-5" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-lg-8" }, [
+              _c("br"),
+              _vm._v(" "),
+              _vm._m(0),
+              _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
+              _c("small", { staticClass: "lead text-white mt-5" }, [
+                _vm._v(
+                  "\n                        Ikuti tutorial dengan topic yang sesuai dengan\n                        bahasa pemrogramman/Framework yang sedang ingin anda\n                        pelajari. Ini membantu anda supaya anda bisa fokus\n                        untuk mempelajari teknologi tertentu secara\n                        bertahap. @endif\n                    "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("form", { staticClass: "mt-5", attrs: { action: "" } }, [
+                _c(
+                  "ul",
+                  { staticClass: "d-flex p-0" },
+                  _vm._l(_vm.tags, function (tag) {
+                    return _c("li", { key: tag.slug, staticClass: "me-2" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass:
+                            "\n                                        btn btn-transparent btn-lg\n                                        px-4\n                                        py-3\n                                        d-flex\n                                        align-items-center\n                                        justify-content-center\n                                        shadow-sm\n                                    ",
+                          style: "background-color:" + tag.color,
+                          attrs: { value: tag.slug, name: "tag" },
+                        },
+                        [
+                          _c("i", {
+                            staticClass: "fab fs-2 fw-bold text-white",
+                            class: "fa-" + tag.icon,
+                          }),
+                        ]
+                      ),
+                    ])
+                  }),
+                  0
+                ),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]
+    ),
     _vm._v(" "),
     _c("div", { staticClass: "container-fluid series-content" }, [
       _c("div", { staticClass: "card p-4 shadow position-relative" }, [
         _c(
           "div",
           { staticClass: "row mt-4" },
-          [
-            _c("seriecard-component"),
-            _vm._v(" "),
-            _c("seriecard-component"),
-            _vm._v(" "),
-            _c("seriecard-component"),
-          ],
+          _vm._l(_vm.series, function (serie) {
+            return _c("seriecard-component", {
+              key: serie.slug,
+              attrs: {
+                name: serie.name,
+                status: serie.status,
+                created_at: serie.created_at,
+              },
+            })
+          }),
           1
         ),
       ]),
@@ -28657,79 +28729,39 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c(
-      "section",
-      { staticClass: "py-5 text-start header text-white position-relative" },
+      "a",
+      {
+        staticClass:
+          "\n                            py-1\n                            px-3\n                            mt-5\n                            header-hot\n                            d-flex\n                            justify-content-between\n                            align-items-center\n                            text-white\n                        ",
+        attrs: { href: "" },
+      },
       [
-        _c("div", { staticClass: "container-fluid pb-5" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-8" }, [
-              _c("br"),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass:
-                    "\n                            py-1\n                            px-3\n                            mt-5\n                            header-hot\n                            d-flex\n                            justify-content-between\n                            align-items-center\n                            text-white\n                        ",
-                  attrs: { href: "" },
-                },
-                [
-                  _c("div", [
-                    _c("span", { staticClass: "badge bg-danger me-2" }, [
-                      _c("i", { staticClass: "fas fa-fire me-1" }),
-                      _vm._v(" HOT\n                            "),
-                    ]),
-                    _vm._v(" "),
-                    _c("small", [
-                      _vm._v(
-                        "\n                                Reedem untuk membuka seluruh tutorial\n                            "
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("i", { staticClass: "fas fa-chevron-right" }),
-                ]
-              ),
-              _vm._v(" "),
-              _c("h1", { staticClass: "fw-light text-uppercase mt-3" }, [
-                _c(
-                  "span",
-                  { staticClass: "fw-bold serie-name position-relative" },
-                  [_vm._v("Explore Topic Laravel")]
-                ),
-              ]),
-              _vm._v(" "),
-              _c("small", { staticClass: "lead text-white mt-5" }, [
-                _vm._v(
-                  "\n                        Ikuti tutorial dengan topic yang sesuai dengan\n                        bahasa pemrogramman/Framework yang sedang ingin anda\n                        pelajari. Ini membantu anda supaya anda bisa fokus\n                        untuk mempelajari teknologi tertentu secara\n                        bertahap. @endif\n                    "
-                ),
-              ]),
-              _vm._v(" "),
-              _c("form", { staticClass: "mt-5", attrs: { action: "" } }, [
-                _c("ul", { staticClass: "d-flex p-0" }, [
-                  _c("li", { staticClass: "me-2" }, [
-                    _c(
-                      "button",
-                      {
-                        staticClass:
-                          "\n                                        btn btn-transparent btn-lg\n                                        px-4\n                                        py-3\n                                        d-flex\n                                        align-items-center\n                                        justify-content-center\n                                        shadow-sm\n                                    ",
-                        staticStyle: { "background-color": "red !important" },
-                        attrs: { value: "vr", name: "tag" },
-                      },
-                      [
-                        _c("i", {
-                          staticClass:
-                            "\n                                            fab\n                                            fa-laravel\n                                            fs-2\n                                            fw-bold\n                                            text-white\n                                        ",
-                        }),
-                      ]
-                    ),
-                  ]),
-                ]),
-              ]),
-            ]),
+        _c("div", [
+          _c("span", { staticClass: "badge bg-danger me-2" }, [
+            _c("i", { staticClass: "fas fa-fire me-1" }),
+            _vm._v(" HOT\n                            "),
+          ]),
+          _vm._v(" "),
+          _c("small", [
+            _vm._v(
+              "\n                                Reedem untuk membuka seluruh tutorial\n                            "
+            ),
           ]),
         ]),
+        _vm._v(" "),
+        _c("i", { staticClass: "fas fa-chevron-right" }),
       ]
     )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h1", { staticClass: "fw-light text-uppercase mt-3" }, [
+      _c("span", { staticClass: "fw-bold serie-name position-relative" }, [
+        _vm._v("Explore Topic Laravel"),
+      ]),
+    ])
   },
 ]
 render._withStripped = true
