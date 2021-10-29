@@ -49,9 +49,13 @@
         <div class="container-fluid series-content">
             <div class="card p-4 shadow position-relative">
                 <div class="row mt-4">
-                    <seriecard-component></seriecard-component>
-                    <seriecard-component></seriecard-component>
-                    <seriecard-component></seriecard-component>
+                    <seriecard-component
+                        v-for="serie in series"
+                        :key="serie.slug"
+                        :name="serie.name"
+                        :status="serie.status"
+                        :created_at="serie.created_at"
+                    ></seriecard-component>
                 </div>
             </div>
         </div>
@@ -59,7 +63,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+    data() {
+        return {
+            series: [],
+        };
+    },
+    mounted() {
+        axios.get("api/serie").then((response) => {
+            this.series = response.data.data;
+        });
+    },
+};
 </script>
 
 <style></style>

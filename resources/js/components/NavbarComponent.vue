@@ -24,8 +24,8 @@
                         >
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" :to="{ name: 'blog' }">
-                            Blog
+                        <router-link class="nav-link" :to="{ name: 'article' }">
+                            Article
                         </router-link>
                     </li>
                     <li class="nav-item">

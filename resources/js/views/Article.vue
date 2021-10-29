@@ -48,12 +48,16 @@
         <div class="container-fluid series-content">
             <div class="card p-4 shadow position-relative">
                 <div class="row mt-4">
-                    <blogcard-component
-                        v-for="note in notes"
-                        :key="note.slug"
-                        :title="note.title"
-                        :created_at="note.created_at"
-                    ></blogcard-component>
+                    <div
+                        class="col-md-4 mb-4"
+                        v-for="article in articles"
+                        :key="article.slug"
+                    >
+                        <articlecard-component
+                            :title="article.title"
+                            :created_at="article.created_at"
+                        ></articlecard-component>
+                    </div>
                 </div>
             </div>
         </div>
@@ -64,13 +68,13 @@
 export default {
     data() {
         return {
-            notes: [],
+            articles: [],
         };
     },
 
     mounted() {
         axios.get("api/article").then((response) => {
-            this.notes = response.data.data;
+            this.articles = response.data.data;
         });
     },
 };

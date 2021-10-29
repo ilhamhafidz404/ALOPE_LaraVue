@@ -18,245 +18,14 @@
                 <div class="gradient-border-bottom">
                     <div class="gradient-border">
                         <div class="glider" id="blog-series">
-                            <div class="mx-2">
-                                <a href="">
-                                    <div class="card shadow-sm me-2">
-                                        <div class="blog-serie w-100"></div>
-                                        <div class="card-body pt-1">
-                                            <small class="text-muted">
-                                                htrh
-                                            </small>
-                                            <h5
-                                                class="
-                                                    card-title
-                                                    mb-4
-                                                    text-dark
-                                                    mt-0
-                                                "
-                                            >
-                                                hth
-                                            </h5>
-                                            <div
-                                                class="
-                                                    d-flex
-                                                    align-items-center
-                                                    justify-content-between
-                                                "
-                                            >
-                                                <div>
-                                                    <img
-                                                        src=""
-                                                        alt="htr"
-                                                        class="
-                                                            rounded-circle
-                                                            writer-img
-                                                        "
-                                                    />
-                                                    <small
-                                                        class="text-muted ms-2"
-                                                    >
-                                                        htrh
-                                                    </small>
-                                                </div>
-                                                <small class="text-muted">
-                                                    rgrg
-                                                </small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="mx-2">
-                                <a href="">
-                                    <div class="card shadow-sm me-2">
-                                        <div class="blog-serie w-100"></div>
-                                        <div class="card-body pt-1">
-                                            <small class="text-muted">
-                                                htrh
-                                            </small>
-                                            <h5
-                                                class="
-                                                    card-title
-                                                    mb-4
-                                                    text-dark
-                                                    mt-0
-                                                "
-                                            >
-                                                hth
-                                            </h5>
-                                            <div
-                                                class="
-                                                    d-flex
-                                                    align-items-center
-                                                    justify-content-between
-                                                "
-                                            >
-                                                <div>
-                                                    <img
-                                                        src=""
-                                                        alt="htr"
-                                                        class="
-                                                            rounded-circle
-                                                            writer-img
-                                                        "
-                                                    />
-                                                    <small
-                                                        class="text-muted ms-2"
-                                                    >
-                                                        htrh
-                                                    </small>
-                                                </div>
-                                                <small class="text-muted">
-                                                    rgrg
-                                                </small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="mx-2">
-                                <a href="">
-                                    <div class="card shadow-sm me-2">
-                                        <div class="blog-serie w-100"></div>
-                                        <div class="card-body pt-1">
-                                            <small class="text-muted">
-                                                htrh
-                                            </small>
-                                            <h5
-                                                class="
-                                                    card-title
-                                                    mb-4
-                                                    text-dark
-                                                    mt-0
-                                                "
-                                            >
-                                                hth
-                                            </h5>
-                                            <div
-                                                class="
-                                                    d-flex
-                                                    align-items-center
-                                                    justify-content-between
-                                                "
-                                            >
-                                                <div>
-                                                    <img
-                                                        src=""
-                                                        alt="htr"
-                                                        class="
-                                                            rounded-circle
-                                                            writer-img
-                                                        "
-                                                    />
-                                                    <small
-                                                        class="text-muted ms-2"
-                                                    >
-                                                        htrh
-                                                    </small>
-                                                </div>
-                                                <small class="text-muted">
-                                                    rgrg
-                                                </small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="mx-2">
-                                <a href="">
-                                    <div class="card shadow-sm me-2">
-                                        <div class="blog-serie w-100"></div>
-                                        <div class="card-body pt-1">
-                                            <small class="text-muted">
-                                                htrh
-                                            </small>
-                                            <h5
-                                                class="
-                                                    card-title
-                                                    mb-4
-                                                    text-dark
-                                                    mt-0
-                                                "
-                                            >
-                                                hth
-                                            </h5>
-                                            <div
-                                                class="
-                                                    d-flex
-                                                    align-items-center
-                                                    justify-content-between
-                                                "
-                                            >
-                                                <div>
-                                                    <img
-                                                        src=""
-                                                        alt="htr"
-                                                        class="
-                                                            rounded-circle
-                                                            writer-img
-                                                        "
-                                                    />
-                                                    <small
-                                                        class="text-muted ms-2"
-                                                    >
-                                                        htrh
-                                                    </small>
-                                                </div>
-                                                <small class="text-muted">
-                                                    rgrg
-                                                </small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="mx-2">
-                                <a href="">
-                                    <div class="card shadow-sm me-2">
-                                        <div class="blog-serie w-100"></div>
-                                        <div class="card-body pt-1">
-                                            <small class="text-muted">
-                                                htrh
-                                            </small>
-                                            <h5
-                                                class="
-                                                    card-title
-                                                    mb-4
-                                                    text-dark
-                                                    mt-0
-                                                "
-                                            >
-                                                hth
-                                            </h5>
-                                            <div
-                                                class="
-                                                    d-flex
-                                                    align-items-center
-                                                    justify-content-between
-                                                "
-                                            >
-                                                <div>
-                                                    <img
-                                                        src=""
-                                                        alt="htr"
-                                                        class="
-                                                            rounded-circle
-                                                            writer-img
-                                                        "
-                                                    />
-                                                    <small
-                                                        class="text-muted ms-2"
-                                                    >
-                                                        htrh
-                                                    </small>
-                                                </div>
-                                                <small class="text-muted">
-                                                    rgrg
-                                                </small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
+                            <div
+                                class="mx-2"
+                                v-for="article in articles"
+                                :key="article.slug"
+                            >
+                                <articlecard-component
+                                    :title="article.title"
+                                ></articlecard-component>
                             </div>
                         </div>
                     </div>
@@ -284,7 +53,20 @@
 </template>
 
 <script>
-export default {};
+import BlogCardComponent from "./card/ArticleCardComponent.vue";
+export default {
+    components: { BlogCardComponent },
+    data() {
+        return {
+            articles: [],
+        };
+    },
+    mounted() {
+        axios.get("api/latest-article").then((response) => {
+            this.articles = response.data.data;
+        });
+    },
+};
 </script>
 
 <style></style>

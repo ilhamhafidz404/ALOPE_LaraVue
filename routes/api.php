@@ -21,4 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/article', [ArticleController::class, 'index'])->name('article.index');
+Route::get('/latest-article', [ArticleController::class, 'latest'])->name('article.latest');
 Route::get('/serie', [SerieController::class, 'index'])->name('serie.index');

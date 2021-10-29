@@ -17,7 +17,16 @@
                         <small class="text-muted">{{ created_at }}</small>
                         <small class="text-secondary">
                             Serie
-                            <span class="text-success fw-bold">Complete</span>
+                            <span
+                                class="fw-bold"
+                                :class="{
+                                    'text-danger': status === 'stuck',
+                                    'text-success': status === 'complete',
+                                    'text-warning': status === 'development',
+                                }"
+                            >
+                                {{ status }}
+                            </span>
                         </small>
                     </div>
                 </div>
@@ -28,7 +37,7 @@
 
 <script>
 export default {
-    props: ["name", "created_at"],
+    props: ["name", "status", "created_at"],
 };
 </script>
 

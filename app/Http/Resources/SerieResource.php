@@ -18,6 +18,7 @@ class SerieResource extends JsonResource
         return [
             'name' => $this->name,
             'slug' => $this->slug,
+            'status' => $this->status,
             'created_at' => $this->created_at->format('d F Y'),
         ];
     }

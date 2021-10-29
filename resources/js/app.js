@@ -34,8 +34,8 @@ Vue.component(
     require("./components/TestimoniComponent.vue").default
 );
 Vue.component(
-    "blogcard-component",
-    require("./components/card/BlogCardComponent.vue").default
+    "articlecard-component",
+    require("./components/card/ArticleCardComponent.vue").default
 );
 Vue.component(
     "videocard-component",
