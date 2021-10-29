@@ -10,7 +10,7 @@ export default {
     routes: [
         { path: "/", name: "home", component: Home, props: true },
         { path: "/article", name: "article", component: Article, props: true },
-        { path: "/video", name: "video", component: Video },
+        { path: "/video", name: "video", component: Video, props: true },
         { path: "/serie", name: "serie", component: Serie },
         { path: "/topic", name: "topic", component: Topic },
     ],

@@ -9,6 +9,7 @@
                     style="background-image: "
                 ></div>
                 <span
+                    :class="{ 'd-none': isPremium == false }"
                     class="
                         badge
                         bg-white
@@ -26,14 +27,18 @@
                     <i class="fas fa-crown text-warning"></i>
                 </span>
                 <div class="card-body">
-                    <h4 class="card-title my-1 text-dark">Title</h4>
+                    <h4 class="card-title my-1 text-dark">{{ title }}</h4>
                     <div class="d-flex justify-content-between">
                         <div>
                             <small href=""> #tag </small>
                         </div>
                         <div>
-                            <span class="badge bg-secondary"> Episode 10 </span>
-                            <span class="badge bg-secondary"> 25 Menit </span>
+                            <span class="badge bg-secondary">
+                                Episode {{ episode }}
+                            </span>
+                            <span class="badge bg-secondary">
+                                {{ duration }} Menit
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -43,7 +48,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+    props: ["title", "episode", "duration", "isPremium"],
+};
 </script>
 
 <style></style>

@@ -6038,7 +6038,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ["title", "episode", "duration", "isPremium"]
+});
 
 /***/ }),
 
@@ -6811,7 +6818,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      videos: []
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    axios.get("api/video").then(function (response) {
+      _this.videos = response.data.data;
+    });
+  }
+});
 
 /***/ }),
 
@@ -6896,7 +6921,8 @@ __webpack_require__.r(__webpack_exports__);
   }, {
     path: "/video",
     name: "video",
-    component: _views_Video__WEBPACK_IMPORTED_MODULE_2__["default"]
+    component: _views_Video__WEBPACK_IMPORTED_MODULE_2__["default"],
+    props: true
   }, {
     path: "/serie",
     name: "serie",
@@ -27682,66 +27708,73 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "col-sm-12 col-md-6 col-lg-4" }, [
+    _c("a", { attrs: { href: "" } }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "card border-0 bg-transparent position-relative m-0 mb-4",
+        },
+        [
+          _c("div", {
+            staticClass: "rounded video-thumb w-100",
+            staticStyle: { "background-image": "" },
+          }),
+          _vm._v(" "),
+          _c(
+            "span",
+            {
+              staticClass:
+                "\n                    badge\n                    bg-white\n                    position-absolute\n                    end-0\n                    m-3\n                    py-2\n                    px-1\n                    shadow\n                ",
+              class: { "d-none": _vm.isPremium == false },
+              attrs: {
+                "data-bs-toggle": "tooltip",
+                "data-bs-placement": "top",
+                title: "CSS",
+              },
+            },
+            [_c("i", { staticClass: "fas fa-crown text-warning" })]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body" }, [
+            _c("h4", { staticClass: "card-title my-1 text-dark" }, [
+              _vm._v(_vm._s(_vm.title)),
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "d-flex justify-content-between" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("div", [
+                _c("span", { staticClass: "badge bg-secondary" }, [
+                  _vm._v(
+                    "\n                            Episode " +
+                      _vm._s(_vm.episode) +
+                      "\n                        "
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("span", { staticClass: "badge bg-secondary" }, [
+                  _vm._v(
+                    "\n                            " +
+                      _vm._s(_vm.duration) +
+                      " Menit\n                        "
+                  ),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]
+      ),
+    ]),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-sm-12 col-md-6 col-lg-4" }, [
-      _c("a", { attrs: { href: "" } }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "card border-0 bg-transparent position-relative m-0 mb-4",
-          },
-          [
-            _c("div", {
-              staticClass: "rounded video-thumb w-100",
-              staticStyle: { "background-image": "" },
-            }),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                staticClass:
-                  "\n                    badge\n                    bg-white\n                    position-absolute\n                    end-0\n                    m-3\n                    py-2\n                    px-1\n                    shadow\n                ",
-                attrs: {
-                  "data-bs-toggle": "tooltip",
-                  "data-bs-placement": "top",
-                  title: "CSS",
-                },
-              },
-              [_c("i", { staticClass: "fas fa-crown text-warning" })]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _c("h4", { staticClass: "card-title my-1 text-dark" }, [
-                _vm._v("Title"),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "d-flex justify-content-between" }, [
-                _c("div", [
-                  _c("small", { attrs: { href: "" } }, [_vm._v(" #tag ")]),
-                ]),
-                _vm._v(" "),
-                _c("div", [
-                  _c("span", { staticClass: "badge bg-secondary" }, [
-                    _vm._v(" Episode 10 "),
-                  ]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "badge bg-secondary" }, [
-                    _vm._v(" 25 Menit "),
-                  ]),
-                ]),
-              ]),
-            ]),
-          ]
-        ),
-      ]),
-    ])
+    return _c("div", [_c("small", { attrs: { href: "" } }, [_vm._v(" #tag ")])])
   },
 ]
 render._withStripped = true
@@ -28729,13 +28762,17 @@ var render = function () {
         _c(
           "div",
           { staticClass: "row mt-4" },
-          [
-            _c("videocard-component"),
-            _vm._v(" "),
-            _c("videocard-component"),
-            _vm._v(" "),
-            _c("videocard-component"),
-          ],
+          _vm._l(_vm.videos, function (video) {
+            return _c("videocard-component", {
+              key: video.slug,
+              attrs: {
+                title: video.title,
+                episode: video.episode,
+                duration: video.duration,
+                isPremium: video.isPremium,
+              },
+            })
+          }),
           1
         ),
       ]),

@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Article;
 use App\Models\Serie;
-use Database\Factories\ArticleFactory;
+use App\Models\Video;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -19,5 +19,6 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         Article::factory(10)->create();
         Serie::factory(6)->create();
+        Video::factory(10)->create();
     }
 }

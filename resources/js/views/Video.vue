@@ -48,9 +48,14 @@
         <div class="container-fluid series-content">
             <div class="card p-4 shadow position-relative">
                 <div class="row mt-4">
-                    <videocard-component></videocard-component>
-                    <videocard-component></videocard-component>
-                    <videocard-component></videocard-component>
+                    <videocard-component
+                        v-for="video in videos"
+                        :key="video.slug"
+                        :title="video.title"
+                        :episode="video.episode"
+                        :duration="video.duration"
+                        :isPremium="video.isPremium"
+                    ></videocard-component>
                 </div>
             </div>
         </div>
@@ -58,7 +63,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+    data() {
+        return {
+            videos: [],
+        };
+    },
+    mounted() {
+        axios.get("api/video").then((response) => {
+            this.videos = response.data.data;
+        });
+    },
+};
 </script>
 
 <style></style>
