@@ -12,4 +12,8 @@ class VideoController extends Controller
         $videos= Video::latest()->get();
         return VideoResource::collection($videos);
     }
+
+    public function stream(Video $video){
+        return VideoResource::make($video);
+    }
 }

@@ -6059,8 +6059,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["title", "episode", "duration", "isPremium"]
+  props: ["title", "slug", "episode", "duration", "isPremium"]
 });
 
 /***/ }),
@@ -6856,6 +6858,358 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/StreamVideo.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/StreamVideo.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      video: []
+    };
+  },
+  mounted: function mounted() {
+    this.getVideo();
+  },
+  methods: {
+    getVideo: function getVideo() {
+      var _this = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        var response;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return axios.get("/api/video/" + _this.$route.params.videoSlug);
+
+              case 2:
+                response = _context.sent;
+                _this.video = response.data.data;
+
+              case 4:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Topic.vue?vue&type=script&lang=js&":
 /*!*******************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Topic.vue?vue&type=script&lang=js& ***!
@@ -7058,6 +7412,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -7139,8 +7494,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _views_Article__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../views/Article */ "./resources/js/views/Article.vue");
 /* harmony import */ var _views_ReadArticle__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../views/ReadArticle */ "./resources/js/views/ReadArticle.vue");
 /* harmony import */ var _views_Video__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../views/Video */ "./resources/js/views/Video.vue");
-/* harmony import */ var _views_Serie__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../views/Serie */ "./resources/js/views/Serie.vue");
-/* harmony import */ var _views_Topic__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../views/Topic */ "./resources/js/views/Topic.vue");
+/* harmony import */ var _views_StreamVideo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../views/StreamVideo */ "./resources/js/views/StreamVideo.vue");
+/* harmony import */ var _views_Serie__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../views/Serie */ "./resources/js/views/Serie.vue");
+/* harmony import */ var _views_Topic__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../views/Topic */ "./resources/js/views/Topic.vue");
+
 
 
 
@@ -7170,13 +7527,17 @@ __webpack_require__.r(__webpack_exports__);
     component: _views_Video__WEBPACK_IMPORTED_MODULE_3__["default"],
     props: true
   }, {
+    path: "/video/:videoSlug",
+    name: "stream.video",
+    component: _views_StreamVideo__WEBPACK_IMPORTED_MODULE_4__["default"]
+  }, {
     path: "/serie",
     name: "serie",
-    component: _views_Serie__WEBPACK_IMPORTED_MODULE_4__["default"]
+    component: _views_Serie__WEBPACK_IMPORTED_MODULE_5__["default"]
   }, {
     path: "/topic",
     name: "topic",
-    component: _views_Topic__WEBPACK_IMPORTED_MODULE_5__["default"]
+    component: _views_Topic__WEBPACK_IMPORTED_MODULE_6__["default"]
   }]
 });
 
@@ -27189,6 +27550,45 @@ component.options.__file = "resources/js/views/Serie.vue"
 
 /***/ }),
 
+/***/ "./resources/js/views/StreamVideo.vue":
+/*!********************************************!*\
+  !*** ./resources/js/views/StreamVideo.vue ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _StreamVideo_vue_vue_type_template_id_70f281e8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./StreamVideo.vue?vue&type=template&id=70f281e8& */ "./resources/js/views/StreamVideo.vue?vue&type=template&id=70f281e8&");
+/* harmony import */ var _StreamVideo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./StreamVideo.vue?vue&type=script&lang=js& */ "./resources/js/views/StreamVideo.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _StreamVideo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _StreamVideo_vue_vue_type_template_id_70f281e8___WEBPACK_IMPORTED_MODULE_0__.render,
+  _StreamVideo_vue_vue_type_template_id_70f281e8___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/views/StreamVideo.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/views/Topic.vue":
 /*!**************************************!*\
   !*** ./resources/js/views/Topic.vue ***!
@@ -27459,6 +27859,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/views/StreamVideo.vue?vue&type=script&lang=js&":
+/*!*********************************************************************!*\
+  !*** ./resources/js/views/StreamVideo.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_StreamVideo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./StreamVideo.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/StreamVideo.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_StreamVideo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/views/Topic.vue?vue&type=script&lang=js&":
 /*!***************************************************************!*\
   !*** ./resources/js/views/Topic.vue?vue&type=script&lang=js& ***!
@@ -27691,6 +28107,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Serie_vue_vue_type_template_id_576e39ed___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Serie_vue_vue_type_template_id_576e39ed___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Serie.vue?vue&type=template&id=576e39ed& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Serie.vue?vue&type=template&id=576e39ed&");
+
+
+/***/ }),
+
+/***/ "./resources/js/views/StreamVideo.vue?vue&type=template&id=70f281e8&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/views/StreamVideo.vue?vue&type=template&id=70f281e8& ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_StreamVideo_vue_vue_type_template_id_70f281e8___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_StreamVideo_vue_vue_type_template_id_70f281e8___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_StreamVideo_vue_vue_type_template_id_70f281e8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./StreamVideo.vue?vue&type=template&id=70f281e8& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/StreamVideo.vue?vue&type=template&id=70f281e8&");
 
 
 /***/ }),
@@ -28827,75 +29260,83 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "col-sm-12 col-md-6 col-lg-4" }, [
-    _c("a", { attrs: { href: "" } }, [
+  return _c(
+    "div",
+    { staticClass: "col-sm-12 col-md-6 col-lg-4" },
+    [
       _c(
-        "div",
+        "router-link",
         {
-          staticClass:
-            "card border-0 bg-transparent position-relative m-0 mb-4",
+          attrs: {
+            to: { name: "stream.video", params: { videoSlug: _vm.slug } },
+          },
         },
         [
-          _c("div", {
-            staticClass: "rounded video-thumb w-100",
-            staticStyle: { "background-image": "" },
-          }),
-          _vm._v(" "),
           _c(
-            "span",
+            "div",
             {
               staticClass:
-                "\n                    badge\n                    bg-white\n                    position-absolute\n                    end-0\n                    m-3\n                    py-2\n                    px-1\n                    shadow\n                ",
-              class: { "d-none": _vm.isPremium == false },
-              attrs: {
-                "data-bs-toggle": "tooltip",
-                "data-bs-placement": "top",
-                title: "CSS",
-              },
+                "card border-0 bg-transparent position-relative m-0 mb-4",
             },
-            [_c("i", { staticClass: "fas fa-crown text-warning" })]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _c("h4", { staticClass: "card-title my-1 text-dark" }, [
-              _vm._v(_vm._s(_vm.title)),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "d-flex justify-content-between" }, [
-              _vm._m(0),
+            [
+              _c("div", {
+                staticClass: "rounded video-thumb w-100",
+                staticStyle: { "background-image": "" },
+              }),
               _vm._v(" "),
-              _c("div", [
-                _c("span", { staticClass: "badge bg-secondary" }, [
-                  _vm._v(
-                    "\n                            Episode " +
-                      _vm._s(_vm.episode) +
-                      "\n                        "
-                  ),
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "\n                    badge\n                    bg-white\n                    position-absolute\n                    end-0\n                    m-3\n                    py-2\n                    px-1\n                    shadow\n                ",
+                  class: { "d-none": _vm.isPremium == false },
+                  attrs: {
+                    "data-bs-toggle": "tooltip",
+                    "data-bs-placement": "top",
+                    title: "CSS",
+                  },
+                },
+                [_c("i", { staticClass: "fas fa-crown text-warning" })]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("h4", { staticClass: "card-title my-1 text-dark" }, [
+                  _vm._v(_vm._s(_vm.title)),
                 ]),
                 _vm._v(" "),
-                _c("span", { staticClass: "badge bg-secondary" }, [
-                  _vm._v(
-                    "\n                            " +
-                      _vm._s(_vm.duration) +
-                      " Menit\n                        "
-                  ),
+                _c("div", { staticClass: "d-flex justify-content-between" }, [
+                  _c("div", [
+                    _c("small", { attrs: { href: "" } }, [_vm._v(" #tag ")]),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", [
+                    _c("span", { staticClass: "badge bg-secondary" }, [
+                      _vm._v(
+                        "\n                            Episode " +
+                          _vm._s(_vm.episode) +
+                          "\n                        "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "badge bg-secondary" }, [
+                      _vm._v(
+                        "\n                            " +
+                          _vm._s(_vm.duration) +
+                          " Menit\n                        "
+                      ),
+                    ]),
+                  ]),
                 ]),
               ]),
-            ]),
-          ]),
+            ]
+          ),
         ]
       ),
-    ]),
-  ])
+    ],
+    1
+  )
 }
-var staticRenderFns = [
-  function () {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [_c("small", { attrs: { href: "" } }, [_vm._v(" #tag ")])])
-  },
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -29948,6 +30389,386 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/StreamVideo.vue?vue&type=template&id=70f281e8&":
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/StreamVideo.vue?vue&type=template&id=70f281e8& ***!
+  \******************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("section", {
+        staticClass: "py-5 text-start header text-white position-relative",
+        staticStyle: { height: "400px" },
+      }),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "container-fluid",
+          staticStyle: { width: "90%", "margin-top": "-260px" },
+        },
+        [
+          _c("div", { staticClass: "card p-2" }, [
+            _c("iframe", {
+              attrs: {
+                width: "100%",
+                height: "350px",
+                src: "https://www.youtube.com/embed/N7iY-jNWeFc",
+              },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "mt-4" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-7" }, [
+                _c("div", { staticClass: "card mb-3 p-3 position-relative" }, [
+                  _c("div", { staticClass: "text-center" }, [
+                    _c("small", [_vm._v("Serie Pembelajaran")]),
+                    _vm._v(" "),
+                    _c("h3", { staticClass: "fw-bold mt-0 mb-1" }, [
+                      _vm._v("kategory"),
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "ul",
+                      { staticClass: "d-flex justify-content-center p-0" },
+                      [
+                        _c("li", [
+                          _c(
+                            "button",
+                            {
+                              staticClass:
+                                "\n                                            btn btn-transparent\n                                            text-primary\n                                            px-1\n                                            py-1\n                                        ",
+                              attrs: {
+                                "data-bs-toggle": "popover",
+                                title: "tag",
+                                "data-bs-trigger": "focus",
+                                "data-bs-content": "lorem  ",
+                              },
+                            },
+                            [
+                              _vm._v(
+                                "\n                                        #tag\n                                    "
+                              ),
+                            ]
+                          ),
+                        ]),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "\n                                    d-flex\n                                    align-items-center\n                                    justify-content-center\n                                    rounded\n                                    py-4\n                                    top-50\n                                    position-absolute\n                                ",
+                        staticStyle: {
+                          width: "25px",
+                          height: "30px",
+                          right: "-3px",
+                          transform: "translateY(-50%)",
+                          "background-color": "#36275d",
+                        },
+                      },
+                      [
+                        _c(
+                          "a",
+                          { staticClass: "text-white", attrs: { href: "" } },
+                          [
+                            _c("i", {
+                              staticClass:
+                                "\n                                            fas\n                                            fa-chevron-right\n                                            py-3\n                                            px-2\n                                        ",
+                            }),
+                          ]
+                        ),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "\n                                    d-flex\n                                    align-items-center\n                                    justify-content-center\n                                    rounded\n                                    py-4\n                                    top-50\n                                    position-absolute\n                                ",
+                        staticStyle: {
+                          width: "25px",
+                          height: "30px",
+                          left: "-3px",
+                          transform: "translateY(-50%)",
+                          "background-color": "#36275d",
+                        },
+                      },
+                      [
+                        _c(
+                          "a",
+                          { staticClass: "text-white", attrs: { href: "" } },
+                          [
+                            _c("i", {
+                              staticClass:
+                                "\n                                            fas\n                                            fa-chevron-left\n                                            py-3\n                                            px-2\n                                        ",
+                            }),
+                          ]
+                        ),
+                      ]
+                    ),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "p",
+                    {
+                      staticClass: "text-dark mt-3 mx-auto",
+                      staticStyle: { width: "90%" },
+                    },
+                    [
+                      _vm._v(
+                        "\n                            deskripsi Lorem ipsum dolor sit amet consectetur\n                            adipisicing elit. Atque, asperiores saepe amet\n                            laudantium fugit ipsam assumenda dolorum\n                            voluptate a soluta, recusandae officia. Fugit\n                            reprehenderit sit maxime est tempora assumenda?\n                            Sed.\n                        "
+                      ),
+                    ]
+                  ),
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "accordion position-relative",
+                    attrs: { id: "accordionExample" },
+                  },
+                  [
+                    _c("div", { staticClass: "accordion-item" }, [
+                      _c(
+                        "h2",
+                        {
+                          staticClass: "accordion-header",
+                          attrs: { id: "headingOne" },
+                        },
+                        [
+                          _c(
+                            "button",
+                            {
+                              staticClass: "accordion-button",
+                              attrs: {
+                                type: "button",
+                                "data-bs-toggle": "collapse",
+                                "data-bs-target": "#description",
+                              },
+                            },
+                            [
+                              _vm._v(
+                                "\n                                    Deskripsi\n                                "
+                              ),
+                            ]
+                          ),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "accordion-collapse collapse show",
+                          attrs: { id: "description" },
+                        },
+                        [
+                          _c("div", { staticClass: "accordion-body" }, [
+                            _vm._v(
+                              "\n                                    deskripsi video Lorem ipsum dolor sit,\n                                    amet consectetur adipisicing elit. Autem\n                                    nemo necessitatibus, veritatis aut\n                                    deleniti voluptate placeat, perferendis\n                                    dignissimos at ad provident sit\n                                    repellat, nobis id optio mollitia\n                                    commodi rem illo!\n                                "
+                            ),
+                          ]),
+                        ]
+                      ),
+                    ]),
+                  ]
+                ),
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-5" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "card p-3 mb-4 text-center position-relative",
+                  },
+                  [
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "\n                                position-absolute\n                                start-0\n                                fs-5\n                                top-50\n                                text-muted\n                                ms-3\n                            ",
+                        staticStyle: { transform: "translateY(-50%)" },
+                        attrs: { href: "" },
+                      },
+                      [_c("i", { staticClass: "fas fa-chevron-left" })]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "h4",
+                      {
+                        staticClass: "mt-2 mx-auto",
+                        staticStyle: { "max-width": "90%" },
+                      },
+                      [
+                        _vm._v(
+                          "\n                            Judul video\n                        "
+                        ),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "\n                                position-absolute\n                                end-0\n                                fs-5\n                                top-50\n                                text-muted\n                                me-3\n                            ",
+                        staticStyle: { transform: "translateY(-50%)" },
+                        attrs: { href: "" },
+                      },
+                      [_c("i", { staticClass: "fas fa-chevron-right" })]
+                    ),
+                    _vm._v(" "),
+                    _c("small", [_vm._v("Episode 1/10")]),
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "card shadow-sm p-0" }, [
+                  _c("div", { staticClass: "list-group p-0" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "\n                                    list-group-item list-group-item-action\n                                    active\n                                    d-flex\n                                    justify-content-between\n                                ",
+                        staticStyle: { background: "linear-gradient(" },
+                        attrs: { href: "#", "aria-current": "true" },
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "\n                                        d-flex\n                                        align-items-center\n                                        justify-content-center\n                                    ",
+                            staticStyle: { width: "15%" },
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "\n                                            border\n                                            rounded-circle\n                                            d-flex\n                                            align-items-center\n                                            justify-content-center\n                                        ",
+                                staticStyle: { width: "30px", height: "30px" },
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                        10\n                                    "
+                                ),
+                              ]
+                            ),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "ms-2",
+                            staticStyle: { width: "85%" },
+                          },
+                          [
+                            _c("h6", { staticClass: "mb-1" }, [
+                              _vm._v("Judul"),
+                            ]),
+                            _vm._v(" "),
+                            _c("small", [
+                              _c("i", { staticClass: "fas fa-play me-1" }),
+                              _vm._v(" "),
+                              _c("span", { staticClass: "fw-bold" }, [
+                                _vm._v(
+                                  "\n                                            Diputar\n                                        "
+                                ),
+                              ]),
+                            ]),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("i", { staticClass: "fas fa-crown text-warning" }),
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "\n                                    list-group-item list-group-item-action\n                                    d-flex\n                                    justify-content-between\n                                ",
+                        attrs: { href: "", "aria-current": "true" },
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "\n                                        d-flex\n                                        justify-content-center\n                                        align-items-center\n                                    ",
+                            staticStyle: { width: "15%" },
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "\n                                            border\n                                            rounded-circle\n                                            d-flex\n                                            align-items-center\n                                            justify-content-center\n                                        ",
+                                staticStyle: { width: "30px", height: "30px" },
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                        10\n                                    "
+                                ),
+                              ]
+                            ),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "ms-2",
+                            staticStyle: { width: "85%" },
+                          },
+                          [
+                            _c("h6", { staticClass: "mb-1" }, [
+                              _vm._v("Judul Video"),
+                            ]),
+                            _vm._v(" "),
+                            _c("small", [_vm._v("26 Min")]),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("i", { staticClass: "fas fa-crown text-warning" }),
+                      ]
+                    ),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]
+      ),
+    ])
+  },
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Topic.vue?vue&type=template&id=ded477c0&":
 /*!************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Topic.vue?vue&type=template&id=ded477c0& ***!
@@ -30114,6 +30935,7 @@ var render = function () {
               key: video.slug,
               attrs: {
                 title: video.title,
+                slug: video.slug,
                 episode: video.episode,
                 duration: video.duration,
                 isPremium: video.isPremium,

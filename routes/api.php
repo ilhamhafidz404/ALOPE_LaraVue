@@ -31,3 +31,4 @@ Route::get('/serie', [SerieController::class, 'index'])->name('serie.index');
 Route::get('/tag', TagController::class)->name('tag');
 
 Route::get('/video', [VideoController::class, 'index'])->name('video.index');
+Route::get('/video/{video:slug}', [VideoController::class, 'stream'])->name('video.stream');

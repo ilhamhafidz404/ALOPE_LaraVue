@@ -1,6 +1,8 @@
 <template>
     <div class="col-sm-12 col-md-6 col-lg-4">
-        <a href="">
+        <router-link
+            :to="{ name: 'stream.video', params: { videoSlug: slug } }"
+        >
             <div
                 class="card border-0 bg-transparent position-relative m-0 mb-4"
             >
@@ -43,13 +45,13 @@
                     </div>
                 </div>
             </div>
-        </a>
+        </router-link>
     </div>
 </template>
 
 <script>
 export default {
-    props: ["title", "episode", "duration", "isPremium"],
+    props: ["title", "slug", "episode", "duration", "isPremium"],
 };
 </script>
 

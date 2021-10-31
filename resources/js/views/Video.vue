@@ -52,6 +52,7 @@
                         v-for="video in videos"
                         :key="video.slug"
                         :title="video.title"
+                        :slug="video.slug"
                         :episode="video.episode"
                         :duration="video.duration"
                         :isPremium="video.isPremium"
