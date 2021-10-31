@@ -18,6 +18,7 @@ class CreateArticlesTable extends Migration
             $table->string('thumbnail');
             $table->string('title');
             $table->string('slug');
+            $table->foreignId('serie_id');
             $table->text('content');
             $table->enum('status', ['upload', 'pending', 'banned']);
             $table->timestamps();

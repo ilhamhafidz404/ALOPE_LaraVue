@@ -18,6 +18,7 @@ class CreateVideosTable extends Migration
             $table->string('thumbnail');
             $table->string('title');
             $table->string('slug');
+            $table->foreignId('serie_id');
             $table->text('description');
             $table->text('link');
             $table->integer('episode');

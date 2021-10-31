@@ -1,6 +1,8 @@
 <template>
     <div class="col-sm-12 col-md-6 col-lg-4">
-        <a href="">
+        <router-link
+            :to="{ name: 'filterby.serie', params: { serieSlug: slug } }"
+        >
             <div class="card border-0 bg-transparent px-1 m-auto mb-4">
                 <img
                     src=""
@@ -36,13 +38,13 @@
                     </div>
                 </div>
             </div>
-        </a>
+        </router-link>
     </div>
 </template>
 
 <script>
 export default {
-    props: ["name", "status", "tags", "created_at"],
+    props: ["name", "slug", "status", "tags", "created_at"],
 };
 </script>
 

@@ -18,6 +18,7 @@ class ArticleResource extends JsonResource
         return [
             'id' => $this->id,
             'title' => $this->title,
+            'serie' => $this->serie->slug,
             'slug' => $this->slug,
             'created_at' => $this->created_at->format('d F Y'),
         ];

@@ -27,6 +27,7 @@ Route::get('/latest-article', [ArticleController::class, 'latest'])->name('artic
 Route::get('/article/{article:slug}', [ArticleController::class, 'read'])->name('article.read');
 
 Route::get('/serie', [SerieController::class, 'index'])->name('serie.index');
+Route::get('/serie/{serie:slug}', [SerieController::class, 'filterContent'])->name('serie.filterContent');
 
 Route::get('/tag', TagController::class)->name('tag');
 

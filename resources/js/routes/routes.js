@@ -4,6 +4,7 @@ import readArticle from "../views/ReadArticle";
 import Video from "../views/Video";
 import streamVideo from "../views/StreamVideo";
 import Serie from "../views/Serie";
+import filterBySerie from "../views/FilterBySerie";
 import Topic from "../views/Topic";
 export default {
     mode: "history",
@@ -24,6 +25,11 @@ export default {
             component: streamVideo,
         },
         { path: "/serie", name: "serie", component: Serie },
+        {
+            path: "/serie/:serieSlug",
+            name: "filterby.serie",
+            component: filterBySerie,
+        },
         { path: "/topic", name: "topic", component: Topic },
     ],
 };

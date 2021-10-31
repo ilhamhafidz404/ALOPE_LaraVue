@@ -18,6 +18,7 @@ class VideoFactory extends Factory
             'thumbnail' => 'default.jpg',
             'title' => $this->faker->sentence(rand(1,2)),
             'slug' => Str::slug($this->faker->sentence(rand(1,2))),
+            'serie_id' => rand(1,6),
             'description' => $this->faker->paragraph(rand(1,2)),
             'link' => 'https://www.youtube.com/embed/N7iY-jNWeFc',
             'episode' => rand(1,10),

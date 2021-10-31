@@ -18,6 +18,7 @@ class ArticleFactory extends Factory
             'thumbnail' => 'default.jpg',
             'title' => $this->faker->sentence(2),
             'slug' => Str::slug($this->faker->sentence(2)),
+            'serie_id' => rand(1,6),
             'content' => $this->faker->paragraph(rand(2,4)),
             'status' => 'upload',
             'created_at' => now(),
