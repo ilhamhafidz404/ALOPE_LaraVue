@@ -24,6 +24,7 @@
 
     <script src="https://kit.fontawesome.com/bfdfedea1a.js" crossorigin="anonymous"></script>
     <script src="/js/app.js"></script>
+    <script src="node_modules/vue-disqus/vue-disqus.js"></script>
     <script src="/js/glider.min.js"></script>
 
     

@@ -12,6 +12,7 @@ try {
 // window.Vue = require('vue').default;
 import Vue from "vue";
 import VueRouter from "vue-router";
+import VueDisqus from "vue-disqus";
 
 Vue.use(VueRouter);
 import routes from "./routes/routes";
@@ -50,6 +51,10 @@ Vue.component(
     "footer-component",
     require("./components/FooterComponent.vue").default
 );
+
+Vue.use(VueDisqus, {
+    shortname: "alope-com",
+});
 
 const app = new Vue({
     el: "#app",

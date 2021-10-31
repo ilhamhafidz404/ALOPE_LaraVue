@@ -6609,6 +6609,121 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -6970,9 +7085,10 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
-/* harmony import */ var _routes_routes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./routes/routes */ "./resources/js/routes/routes.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var vue_disqus__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-disqus */ "./node_modules/vue-disqus/dist/vue-disqus.esm.js");
+/* harmony import */ var _routes_routes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./routes/routes */ "./resources/js/routes/routes.js");
 
 window.axios = (axios__WEBPACK_IMPORTED_MODULE_0___default());
 window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
@@ -6987,19 +7103,23 @@ try {
 
 
 
-vue__WEBPACK_IMPORTED_MODULE_1__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_2__["default"]);
 
-vue__WEBPACK_IMPORTED_MODULE_1__["default"].component("navbar-component", __webpack_require__(/*! ./components/NavbarComponent.vue */ "./resources/js/components/NavbarComponent.vue")["default"]);
-vue__WEBPACK_IMPORTED_MODULE_1__["default"].component("header-component", __webpack_require__(/*! ./components/HeaderComponent.vue */ "./resources/js/components/HeaderComponent.vue")["default"]);
-vue__WEBPACK_IMPORTED_MODULE_1__["default"].component("glider-component", __webpack_require__(/*! ./components/GliderComponent.vue */ "./resources/js/components/GliderComponent.vue")["default"]);
-vue__WEBPACK_IMPORTED_MODULE_1__["default"].component("testimoni-component", __webpack_require__(/*! ./components/TestimoniComponent.vue */ "./resources/js/components/TestimoniComponent.vue")["default"]);
-vue__WEBPACK_IMPORTED_MODULE_1__["default"].component("articlecard-component", __webpack_require__(/*! ./components/card/ArticleCardComponent.vue */ "./resources/js/components/card/ArticleCardComponent.vue")["default"]);
-vue__WEBPACK_IMPORTED_MODULE_1__["default"].component("videocard-component", __webpack_require__(/*! ./components/card/VideoCardComponent.vue */ "./resources/js/components/card/VideoCardComponent.vue")["default"]);
-vue__WEBPACK_IMPORTED_MODULE_1__["default"].component("seriecard-component", __webpack_require__(/*! ./components/card/SerieCardComponent.vue */ "./resources/js/components/card/SerieCardComponent.vue")["default"]);
-vue__WEBPACK_IMPORTED_MODULE_1__["default"].component("footer-component", __webpack_require__(/*! ./components/FooterComponent.vue */ "./resources/js/components/FooterComponent.vue")["default"]);
-var app = new vue__WEBPACK_IMPORTED_MODULE_1__["default"]({
+vue__WEBPACK_IMPORTED_MODULE_2__["default"].use(vue_router__WEBPACK_IMPORTED_MODULE_3__["default"]);
+
+vue__WEBPACK_IMPORTED_MODULE_2__["default"].component("navbar-component", __webpack_require__(/*! ./components/NavbarComponent.vue */ "./resources/js/components/NavbarComponent.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_2__["default"].component("header-component", __webpack_require__(/*! ./components/HeaderComponent.vue */ "./resources/js/components/HeaderComponent.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_2__["default"].component("glider-component", __webpack_require__(/*! ./components/GliderComponent.vue */ "./resources/js/components/GliderComponent.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_2__["default"].component("testimoni-component", __webpack_require__(/*! ./components/TestimoniComponent.vue */ "./resources/js/components/TestimoniComponent.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_2__["default"].component("articlecard-component", __webpack_require__(/*! ./components/card/ArticleCardComponent.vue */ "./resources/js/components/card/ArticleCardComponent.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_2__["default"].component("videocard-component", __webpack_require__(/*! ./components/card/VideoCardComponent.vue */ "./resources/js/components/card/VideoCardComponent.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_2__["default"].component("seriecard-component", __webpack_require__(/*! ./components/card/SerieCardComponent.vue */ "./resources/js/components/card/SerieCardComponent.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_2__["default"].component("footer-component", __webpack_require__(/*! ./components/FooterComponent.vue */ "./resources/js/components/FooterComponent.vue")["default"]);
+vue__WEBPACK_IMPORTED_MODULE_2__["default"].use(vue_disqus__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  shortname: "alope-com"
+});
+var app = new vue__WEBPACK_IMPORTED_MODULE_2__["default"]({
   el: "#app",
-  router: new vue_router__WEBPACK_IMPORTED_MODULE_2__["default"](_routes_routes__WEBPACK_IMPORTED_MODULE_3__["default"])
+  router: new vue_router__WEBPACK_IMPORTED_MODULE_3__["default"](_routes_routes__WEBPACK_IMPORTED_MODULE_4__["default"])
 });
 
 /***/ }),
@@ -26583,6 +26703,24 @@ try {
 
 /***/ }),
 
+/***/ "./node_modules/vue-disqus/dist/vue-disqus.esm.js":
+/*!********************************************************!*\
+  !*** ./node_modules/vue-disqus/dist/vue-disqus.esm.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "Disqus": () => (/* binding */ o),
+/* harmony export */   "DisqusCount": () => (/* binding */ a)
+/* harmony export */ });
+var t="Disqus shortname is required. (To resolve this, go to: https://ktquez.github.io/vue-disqus/setup.html#installation)",e=["api_key","author_s3","category_id","identifier","integration","language","remote_auth_s3","slug","title","url"],n=["name","button","icon","url","logout","width","height"],i=["afterRender","onInit","onIdentify","beforeComment","onNewComment","onPaginate","onReady","preData","preInit","preReset"],s=function(t){return requestAnimationFrame((function(){return requestAnimationFrame(t)}))};function r(t,e,n,i,s,r,o,a,u,d){"boolean"!=typeof o&&(u=a,a=o,o=!1);var c,h="function"==typeof n?n.options:n;if(t&&t.render&&(h.render=t.render,h.staticRenderFns=t.staticRenderFns,h._compiled=!0,s&&(h.functional=!0)),i&&(h._scopeId=i),r?(c=function(t){(t=t||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext)||"undefined"==typeof __VUE_SSR_CONTEXT__||(t=__VUE_SSR_CONTEXT__),e&&e.call(this,u(t)),t&&t._registeredComponents&&t._registeredComponents.add(r)},h._ssrRegister=c):e&&(c=o?function(t){e.call(this,d(t,this.$root.$options.shadowRoot))}:function(t){e.call(this,a(t))}),c)if(h.functional){var f=h.render;h.render=function(t,e){return c.call(e),f(t,e)}}else{var l=h.beforeCreate;h.beforeCreate=l?[].concat(l,c):[c]}return n}var o=r({render:function(){var t=this.$createElement;return(this._self._c||t)("div",{staticStyle:{"min-height":"200px"},attrs:{id:"disqus_thread"}})},staticRenderFns:[]},void 0,{name:"Disqus",props:{shortname:String,pageConfig:{type:Object,validator:function(t){return Object.keys(t).every((function(t){return e.includes(t)}))}},ssoConfig:{type:Object,validator:function(t){return Object.keys(t).every((function(t){return n.includes(t)}))}},lang:{type:String,default:"en"},lazy:{type:Boolean,default:!0},lazyConfig:{type:Object,default:function(){return{root:null,rootMargin:"300px",threshold:.5}}}},data:function(){return{observer:null}},computed:{getShortname:function(){var e=this.shortname?this.shortname:this.$disqus?this.$disqus.shortname:null;if(!e)throw new Error(t);return e}},watch:{lang:function(){this.reset()}},mounted:function(){if(this.lazy)return this.observerDisqus();this.init()},methods:{init:function(){var t=this;if(this.$disqus&&(this.$disqus.reset=this.reset),window.DISQUS)return this.reset();var e=this.setBaseConfig;window.disqus_config=function(){e(this)},this.loadEmbedScript(),this.$route&&this.$watch("$route.path",(function(){return t.reset()}))},reset:function(t){void 0===t&&(t=window.DISQUS);var e=this.setBaseConfig;t.reset({reload:!0,config:function(){e(this)}})},observerDisqus:function(){if("IntersectionObserver"in window)return this.observer=new IntersectionObserver(this.handleObserver,this.lazyConfig),this.observer.observe(this.$el);this.init()},handleObserver:function(t){var e=this;t.forEach((function(t){t.isIntersecting&&(e.observer.disconnect(),e.init())}))},loadEmbedScript:function(){var t=document,e=t.createElement("script");e.setAttribute("id","embed-disqus"),e.setAttribute("data-timestamp",+new Date),e.type="text/javascript",e.async=!0,e.src="//"+this.getShortname+".disqus.com/embed.js",(t.head||t.body).appendChild(e)},setBaseConfig:function(t){this.setPageConfig(t),this.cbDisqus(t),this.ssoConfig&&Object.keys(this.ssoConfig).length&&Object.assign(t.sso,this.ssoConfig),t.language=this.lang},setPageConfig:function(t){var e={url:document.baseURI,identifier:this.$route?this.$route.path:window.location.pathname};Object.assign(t.page,e),this.pageConfig&&Object.keys(this.pageConfig).length&&Object.assign(t.page,this.pageConfig)},cbDisqus:function(t){var e=this;i.forEach((function(n){t.callbacks[n]=[function(t){e.$emit(n.replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase().replace("on-",""),t)}]}))}}},void 0,!1,void 0,!1,void 0,void 0,void 0),a=r({render:function(){var t=this.$createElement;return(this._self._c||t)(this.tag,{tag:"component",staticClass:"disqus-comment-count",attrs:{href:this.getHref,"data-disqus-url":this.getUrl,"data-disqus-identifier":this.identifier}})},staticRenderFns:[]},void 0,{name:"DisqusCount",inheritAttrs:!1,props:{url:String,shortname:String,identifier:{type:String,required:!0},tag:{type:String,default:"span"}},mounted:function(){this.init()},computed:{getHref:function(){return"a"===this.tag?this.url+"#disqus_thread":null},getUrl:function(){return"span"===this.tag?this.url:null},getShortname:function(){var e=this.shortname?this.shortname:this.$disqus?this.$disqus.shortname:null;if(!e)throw new Error(t);return e}},methods:{init:function(){var t=this;if("DISQUSWIDGETS"in window)return s((function(){return t.reset()}));this.loadCountScript(),this.$route&&this.$watch("$route.path",(function(){return s((function(){return t.reset()}))}))},reset:function(t){void 0===t&&(t=window.DISQUSWIDGETS),t.getCount({reset:!0})},loadCountScript:function(){if(!document.getElementById("dsq-count-scr")){var t=document,e=t.createElement("script");e.async=!0,e.id="dsq-count-scr",e.src="//"+this.getShortname+".disqus.com/count.js",(t.head||t.body).appendChild(e)}}}},void 0,!1,void 0,!1,void 0,void 0,void 0);function u(t,e){void 0===e&&(e={}),t.component("Disqus",o),t.component("DisqusCount",a),t.prototype.$disqus={shortname:e.shortname||null,reset:null}}"undefined"!=typeof window&&void 0!==window.Vue&&window.Vue.use(u);/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (u);
+
+
+/***/ }),
+
 /***/ "./resources/js/components/FooterComponent.vue":
 /*!*****************************************************!*\
   !*** ./resources/js/components/FooterComponent.vue ***!
@@ -29513,38 +29651,191 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h1", [_vm._v(_vm._s(_vm.article.title))]),
+    _c("section", {
+      staticClass: "py-5 text-start header text-white position-relative",
+      staticStyle: { height: "400px" },
+    }),
     _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("br"),
+    _c(
+      "div",
+      {
+        staticClass: "container-fluid position-relative",
+        staticStyle: { width: "90%", "margin-top": "-310px" },
+      },
+      [
+        _c("div", {
+          staticClass: "p-4 p-md-5 text-white rounded blog-thumb-header",
+          staticStyle: {
+            "background-image":
+              "url(https://images.unsplash.com/photo-1593642532009-6ba71e22f468?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1169&q=80)",
+          },
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "row g-5 mt-4" }, [
+          _c("div", { staticClass: "col-md-8 mt-0" }, [
+            _c("div", { staticClass: "card shadow-sm border-0 bg-white p-4" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c("hr"),
+              _vm._v(" "),
+              _c(
+                "section",
+                {
+                  staticClass: "comments",
+                  attrs: { "aria-labelledby": "comment" },
+                },
+                [_c("Disqus")],
+                1
+              ),
+            ]),
+          ]),
+          _vm._v(" "),
+          _vm._m(1),
+        ]),
+      ]
+    ),
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("article", { staticClass: "blog-post" }, [
+      _c("div", { staticClass: "d-flex justify-content-between" }, [
+        _c("div", [
+          _c("h2", { staticClass: "blog-post-title" }, [_vm._v("judul")]),
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c("i", { staticClass: "fas fa-share text-muted me-3" }),
+          _vm._v(" "),
+          _c("a", { staticClass: "text-danger fs-6", attrs: { href: "" } }, [
+            _c("i", { staticClass: "fas fa-heart" }),
+            _vm._v(
+              "\n                                    4\n                                "
+            ),
+          ]),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("ul", { staticClass: "p-0 d-flex" }, [
+        _c("li", { staticClass: "me-2" }, [
+          _c(
+            "span",
+            {
+              staticClass: "badge",
+              staticStyle: { "background-color": "salmon" },
+            },
+            [
+              _c("i", { staticClass: "fab fa-laravel me-1" }),
+              _vm._v(
+                "\n                                    tag\n                                "
+              ),
+            ]
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(
+        "\n                        kontent blog Lorem ipsum dolor sit amet consectetur\n                        adipisicing elit. Aperiam quae ab labore laudantium\n                        quos eum, fuga cum mollitia veniam doloremque\n                        dignissimos a ipsum, sed dolores consequatur porro\n                        libero architecto optio.\n                        "
+      ),
+      _c("br"),
+      _c("br"),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      _c("div", { staticClass: "article-footer" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-2" }, [
+            _c("img", {
+              staticClass: "w-100 rounded-circle mt-2",
+              attrs: { src: "", alt: "Profile penulis" },
+            }),
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-10" }, [
+            _c("h5", { staticClass: "mb-1" }, [_vm._v("Admin")]),
+            _vm._v(" "),
+            _c("small", { staticClass: "text-muted" }, [
+              _vm._v(
+                "\n                                        Tentang penulis Lorem ipsum dolor\n                                        sit amet, consectetur adipisicing\n                                        elit. Dolore sequi similique\n                                        consectetur pariat\n                                    "
+              ),
+            ]),
+            _vm._v(" "),
+            _c("ul", { staticClass: "d-flex mb-0 p-0 mt-3" }, [
+              _c("li", { staticClass: "me-3" }, [
+                _c("a", { attrs: { href: "" } }, [
+                  _c("small", [
+                    _vm._v(
+                      "\n                                                    Profile Penulis\n                                                "
+                    ),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "me-3" }, [
+                _c("a", { attrs: { href: "" } }, [
+                  _c("small", [
+                    _vm._v(
+                      "\n                                                    Karya Lainnya\n                                                "
+                    ),
+                  ]),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-4" }, [
+      _c(
+        "div",
+        { staticClass: "position-sticky", staticStyle: { top: "2rem" } },
+        [
+          _c(
+            "div",
+            {
+              staticClass:
+                "\n                            p-3\n                            mb-3\n                            shadow-sm\n                            rounded\n                            text-white\n                            serie-blog-info\n                        ",
+            },
+            [
+              _c("h4", { staticClass: "fst-italic" }, [_vm._v("Category")]),
+              _vm._v(" "),
+              _c("p", { staticClass: "mb-0" }, [
+                _vm._v(
+                  "\n                            Lorem ipsum dolor sit amet consectetur\n                            adipisicing elit. Tenetur velit culpa provident\n                            quae quisquam. Alias, culpa iusto. Quisquam\n                            totam facilis quae similique vitae ullam, quod,\n                            aspernatur debitis illo optio hic.\n                        "
+                ),
+              ]),
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "mt-4" }, [
+            _c("h4", { staticClass: "fst-italic" }, [_vm._v("Blog Serupa")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "list-group mt-3" }, [
+              _c(
+                "a",
+                {
+                  staticClass:
+                    "\n                                    list-group-item list-group-item-action\n                                ",
+                  attrs: { href: "" },
+                },
+                [_c("h5", { staticClass: "mb-1" }, [_vm._v("judul")])]
+              ),
+            ]),
+          ]),
+        ]
+      ),
+    ])
+  },
+]
 render._withStripped = true
 
 
