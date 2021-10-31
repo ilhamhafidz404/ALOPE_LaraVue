@@ -15,6 +15,8 @@ class SerieController extends Controller
     }
 
     public function topic(){
-    
+        $series= Serie::latest()->filter(request(['tag']))->get();
+
+        return SerieResource::collection($series);
     }
 }

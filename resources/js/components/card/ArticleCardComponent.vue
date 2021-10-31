@@ -1,5 +1,5 @@
 <template>
-    <a href="">
+    <router-link :to="{ name: 'read.article', params: { articleSlug: slug } }">
         <div class="card shadow-sm">
             <div class="blog-serie w-100" style="background-image: "></div>
             <div class="card-body pt-1">
@@ -18,12 +18,12 @@
                 </div>
             </div>
         </div>
-    </a>
+    </router-link>
 </template>
 
 <script>
 export default {
-    props: ["title", "created_at"],
+    props: ["title", "slug", "created_at"],
 };
 </script>
 

@@ -55,6 +55,7 @@
                     >
                         <articlecard-component
                             :title="article.title"
+                            :slug="article.slug"
                             :created_at="article.created_at"
                         ></articlecard-component>
                     </div>
