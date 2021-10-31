@@ -6189,6 +6189,269 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -29628,15 +29891,396 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    _vm._l(_vm.videos, function (video) {
-      return _c("h1", { key: video.slug }, [_vm._v(_vm._s(video.title))])
-    }),
-    0
-  )
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "container-fluid series-content" }, [
+      _c("div", { staticClass: "card shadow" }, [
+        _c(
+          "div",
+          { staticClass: "accordion", attrs: { id: "accordionExample" } },
+          [
+            _c("div", { staticClass: "accordion-item" }, [
+              _vm._m(1),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "accordion-collapse collapse show",
+                  attrs: { id: "video" },
+                },
+                [
+                  _c("div", { staticClass: "accordion-body" }, [
+                    _c(
+                      "div",
+                      { staticClass: "row" },
+                      _vm._l(_vm.videos, function (video) {
+                        return _c(
+                          "div",
+                          {
+                            key: video.slug,
+                            staticClass: "col-sm-12 col-md-6 col-lg-4",
+                          },
+                          [_vm._m(2, true)]
+                        )
+                      }),
+                      0
+                    ),
+                  ]),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _vm._m(3),
+          ]
+        ),
+      ]),
+    ]),
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "section",
+      { staticClass: "py-5 text-start header text-white position-relative" },
+      [
+        _c("div", { staticClass: "container-fluid" }, [
+          _c(
+            "a",
+            {
+              staticClass:
+                "\n                    py-1\n                    px-3\n                    mt-5\n                    header-hot\n                    d-flex\n                    justify-content-between\n                    align-items-center\n                    text-white\n                    mb-4\n                    overflow-auto\n                ",
+            },
+            [
+              _c("div", [
+                _c("ul", { staticClass: "d-flex" }, [
+                  _c("li", { staticClass: "me-3" }, [
+                    _c(
+                      "span",
+                      {
+                        staticClass: "badge",
+                        staticStyle: { "background-color": "salmon" },
+                      },
+                      [
+                        _c("i", { staticClass: "fab fa-laravel" }),
+                        _vm._v(
+                          "\n                                tag\n                            "
+                        ),
+                      ]
+                    ),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c("i", { staticClass: "fas fa-chevron-right" }),
+            ]
+          ),
+          _vm._v(" "),
+          _c("h1", { staticClass: "fw-light text-uppercase mt-3" }, [
+            _vm._v("\n                Explore Serie\n                "),
+            _c(
+              "span",
+              { staticClass: "fw-bold serie-name position-relative" },
+              [_vm._v("Laravel")]
+            ),
+          ]),
+          _vm._v(" "),
+          _c("small", { staticClass: "lead text-white mt-4" }, [
+            _vm._v(
+              "\n                Lorem ipsum dolor, sit amet consectetur adipisicing elit.\n                Perferendis eos explicabo corporis. Pariatur veniam optio\n                veritatis eveniet error labore incidunt, amet quaerat\n                repellat id voluptatum tempora rerum, eligendi reprehenderit\n                quas?\n            "
+            ),
+          ]),
+          _vm._v(" "),
+          _c("ul", { staticClass: "d-flex align-items-center mt-4" }, [
+            _c("li", { staticClass: "me-4" }, [
+              _c("i", { staticClass: "fas fa-clock me-1" }),
+              _vm._v("\n                    12 Januari 2021\n                "),
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "me-4" }, [
+              _c("i", { staticClass: "fas fa-play me-1" }),
+              _vm._v("\n                    13\n                    "),
+              _c("span", { staticClass: "ms-1" }, [_vm._v(" Episode ")]),
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "me-4" }, [
+              _c("i", { staticClass: "fas fa-door-open me-1" }),
+              _vm._v(" "),
+              _c(
+                "span",
+                { staticClass: "text-warning text-uppercase fw-bold" },
+                [
+                  _vm._v(
+                    "\n                        development\n                    "
+                  ),
+                ]
+              ),
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "me-4" }, [
+              _c("i", { staticClass: "fas fa-users me-1" }),
+              _vm._v("\n                    beginer\n                "),
+            ]),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("br"),
+        _c("br"),
+        _c("br"),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "h2",
+      { staticClass: "accordion-header", attrs: { id: "headingVideo" } },
+      [
+        _c(
+          "button",
+          {
+            staticClass: "accordion-button",
+            attrs: { "data-bs-toggle": "collapse", "data-bs-target": "#video" },
+          },
+          [
+            _vm._v(
+              "\n                            Video\n                        "
+            ),
+          ]
+        ),
+      ]
+    )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "" } }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "\n                                                card\n                                                border-0\n                                                bg-transparent\n                                                position-relative\n                                                m-auto\n                                                mb-4\n                                            ",
+          staticStyle: { width: "90% !important" },
+        },
+        [
+          _c(
+            "span",
+            {
+              staticClass:
+                "\n                                                    badge\n                                                    bg-danger\n                                                    position-absolute\n                                                ",
+              staticStyle: {},
+            },
+            [
+              _vm._v(
+                "\n                                                Video\n                                            "
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", {
+            staticClass:
+              "\n                                                    rounded\n                                                    video-thumb\n                                                    w-100\n                                                ",
+            staticStyle: {
+              "background-image":
+                "url(https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1169&q=80)",
+            },
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body" }, [
+            _c(
+              "h4",
+              {
+                staticClass:
+                  "\n                                                        card-title\n                                                        my-1\n                                                        text-dark\n                                                    ",
+              },
+              [
+                _vm._v(
+                  "\n                                                    title\n                                                "
+                ),
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "\n                                                        d-flex\n                                                        justify-content-between\n                                                    ",
+              },
+              [
+                _c("div", [
+                  _c("small", { attrs: { href: "" } }, [
+                    _vm._v(
+                      "\n                                                            #{category\n                                                        "
+                    ),
+                  ]),
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "\n                                                                badge\n                                                                bg-secondary\n                                                            ",
+                    },
+                    [
+                      _vm._v(
+                        "\n                                                            Episode 10\n                                                        "
+                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      staticClass:
+                        "\n                                                                badge\n                                                                bg-secondary\n                                                            ",
+                    },
+                    [
+                      _vm._v(
+                        "\n                                                            45min\n                                                        "
+                      ),
+                    ]
+                  ),
+                ]),
+              ]
+            ),
+          ]),
+        ]
+      ),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "accordion-item" }, [
+      _c(
+        "h2",
+        { staticClass: "accordion-header", attrs: { id: "headerBlog" } },
+        [
+          _c(
+            "button",
+            {
+              staticClass: "accordion-button collapsed",
+              attrs: {
+                type: "button",
+                "data-bs-toggle": "collapse",
+                "data-bs-target": "#blog",
+              },
+            },
+            [
+              _vm._v(
+                "\n                            Blog\n                        "
+              ),
+            ]
+          ),
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "accordion-collapse collapse", attrs: { id: "blog" } },
+        [
+          _c("div", { staticClass: "accordion-body" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-4 mb-4" }, [
+                _c("a", { attrs: { href: "" } }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "\n                                                position-relative\n                                                card\n                                                shadow-sm\n                                            ",
+                    },
+                    [
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "\n                                                    badge\n                                                    bg-warning\n                                                    text-dark\n                                                    position-absolute\n                                                ",
+                          staticStyle: {},
+                        },
+                        [
+                          _vm._v(
+                            "\n                                                Blog\n                                            "
+                          ),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", {
+                        staticClass: "blog-serie w-100",
+                        staticStyle: {
+                          "background-image":
+                            "url(https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1169&q=80)",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-body pt-1" }, [
+                        _c(
+                          "h5",
+                          {
+                            staticClass:
+                              "\n                                                        card-title\n                                                        mb-4\n                                                        text-dark\n                                                    ",
+                          },
+                          [
+                            _vm._v(
+                              "\n                                                    judul\n                                                "
+                            ),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "\n                                                        d-flex\n                                                        align-items-center\n                                                        justify-content-between\n                                                    ",
+                          },
+                          [
+                            _c("div", [
+                              _c("img", {
+                                staticClass:
+                                  "\n                                                                rounded-circle\n                                                                writer-img\n                                                            ",
+                                attrs: { src: "", alt: "profile" },
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "small",
+                                {
+                                  staticClass:
+                                    "\n                                                                text-muted\n                                                                ms-2\n                                                            ",
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                                                            admin\n                                                        "
+                                  ),
+                                ]
+                              ),
+                            ]),
+                            _vm._v(" "),
+                            _c("small", { staticClass: "text-muted" }, [
+                              _vm._v(
+                                "\n                                                        14 jan\n                                                    "
+                              ),
+                            ]),
+                          ]
+                        ),
+                      ]),
+                    ]
+                  ),
+                ]),
+              ]),
+            ]),
+          ]),
+        ]
+      ),
+    ])
+  },
+]
 render._withStripped = true
 
 
