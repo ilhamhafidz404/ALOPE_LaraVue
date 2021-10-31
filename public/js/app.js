@@ -5761,6 +5761,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -29103,18 +29107,7 @@ var render = function () {
           },
           [
             _c("ul", { staticClass: "navbar-nav ms-auto" }, [
-              _c(
-                "li",
-                { staticClass: "nav-item" },
-                [
-                  _c(
-                    "router-link",
-                    { staticClass: "nav-link", attrs: { exact: "", to: "/" } },
-                    [_vm._v("Beranda")]
-                  ),
-                ],
-                1
-              ),
+              _vm._m(1),
               _vm._v(" "),
               _c(
                 "li",
@@ -29196,7 +29189,7 @@ var render = function () {
                 1
               ),
               _vm._v(" "),
-              _vm._m(1),
+              _vm._m(2),
             ]),
           ]
         ),
@@ -29224,6 +29217,16 @@ var staticRenderFns = [
       },
       [_c("span", { staticClass: "navbar-toggler-icon" })]
     )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", { staticClass: "nav-item" }, [
+      _c("a", { staticClass: "nav-link", attrs: { href: "/" } }, [
+        _c("i", { staticClass: "fas fa-home" }),
+      ]),
+    ])
   },
   function () {
     var _vm = this

@@ -11,8 +11,20 @@
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/testi.css">
-    <link rel="stylesheet" href="/css/glider.css">
+    {{-- <link rel="stylesheet" href="/css/glider.css"> --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glider-js/1.6.6/glider.min.css" integrity="sha512-YM6sLXVMZqkCspZoZeIPGXrhD9wxlxEF7MzniuvegURqrTGV2xTfqq1v9FJnczH+5OGFl5V78RgHZGaK34ylVg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      
+      .next::after {
+    background-image: url(../image/icon-next.svg);
+}
 
+.prev::after {
+    background-image: url(../image/icon-prev.svg);
+}
+    </style>
+
+    
     <title>Hello, world!</title>
   </head>
   <body>
@@ -24,7 +36,6 @@
 
     <script src="https://kit.fontawesome.com/bfdfedea1a.js" crossorigin="anonymous"></script>
     <script src="/js/app.js"></script>
-    <script src="node_modules/vue-disqus/vue-disqus.js"></script>
     <script src="/js/glider.min.js"></script>
 
     
