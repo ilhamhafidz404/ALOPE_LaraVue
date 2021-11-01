@@ -8,7 +8,7 @@
             >
                 <div
                     class="rounded video-thumb w-100"
-                    style="background-image: "
+                    :style="'background-image: url(' + thumbnail + ')'"
                 ></div>
                 <span
                     :class="{ 'd-none': isPremium == false }"
@@ -51,7 +51,7 @@
 
 <script>
 export default {
-    props: ["title", "slug", "episode", "duration", "isPremium"],
+    props: ["title", "slug", "thumbnail", "episode", "duration", "isPremium"],
 };
 </script>
 

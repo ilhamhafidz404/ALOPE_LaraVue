@@ -83,6 +83,7 @@
                         v-for="serie in series"
                         :key="serie.slug"
                         :name="serie.name"
+                        :thumbnail="serie.thumbnail"
                         :status="serie.status"
                         :tags="serie.tag"
                         :created_at="serie.created_at"

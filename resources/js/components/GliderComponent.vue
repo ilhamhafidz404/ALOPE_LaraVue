@@ -25,6 +25,7 @@
                             >
                                 <articlecard-component
                                     :title="article.title"
+                                    :thumbnail="article.thumbnail"
                                 ></articlecard-component>
                             </div>
                         </div>
@@ -69,4 +70,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.glider-track {
+    width: 2000px !important;
+}
+.glider-slide {
+    width: 300px !important;
+}
+</style>

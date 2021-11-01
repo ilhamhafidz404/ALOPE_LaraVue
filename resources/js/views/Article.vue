@@ -56,6 +56,7 @@
                         <articlecard-component
                             :title="article.title"
                             :slug="article.slug"
+                            :thumbnail="article.thumbnail"
                             :created_at="article.created_at"
                         ></articlecard-component>
                     </div>

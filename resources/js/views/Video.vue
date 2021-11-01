@@ -53,6 +53,7 @@
                         :key="video.slug"
                         :title="video.title"
                         :slug="video.slug"
+                        :thumbnail="video.thumbnail"
                         :episode="video.episode"
                         :duration="video.duration"
                         :isPremium="video.isPremium"

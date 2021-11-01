@@ -36,7 +36,10 @@
                             </p>
                         </div>
                         <div class="slide-img">
-                            <img src="" alt="img" />
+                            <img
+                                src="http://127.0.0.1:8000/image/testi/citra.jpg"
+                                alt="img"
+                            />
                         </div>
                     </div>
                     <div class="slide slide-2">
@@ -55,7 +58,10 @@
                             </p>
                         </div>
                         <div class="slide-img">
-                            <img src="" alt="img" />
+                            <img
+                                src="http://127.0.0.1:8000/image/testi/jasmine.jpg"
+                                alt="img"
+                            />
                         </div>
                     </div>
                     <div class="slide slide-3">
@@ -74,7 +80,10 @@
                             </p>
                         </div>
                         <div class="slide-img">
-                            <img src="" alt="img" />
+                            <img
+                                src="http://127.0.0.1:8000/image/testi/masnun.jpg"
+                                alt="img"
+                            />
                         </div>
                     </div>
                     <div class="slide slide-4">
@@ -94,7 +103,10 @@
                             </p>
                         </div>
                         <div class="slide-img">
-                            <img src="" alt="testi-naufal" />
+                            <img
+                                src="http://127.0.0.1:8000/image/testi/naufal.jpg"
+                                alt="testi-naufal"
+                            />
                         </div>
                     </div>
                     <div class="buttons">

@@ -1,7 +1,11 @@
 <template>
     <router-link :to="{ name: 'read.article', params: { articleSlug: slug } }">
         <div class="card shadow-sm">
-            <div class="blog-serie w-100" style="background-image: "></div>
+            <div
+                class="blog-serie w-100"
+                :style="'background-image: url(' + thumbnail + ')'"
+            ></div>
+            <span> </span>
             <div class="card-body pt-1">
                 <small class="text-muted"> Category </small>
                 <h5 class="card-title mb-4 text-dark mt-0">{{ title }}</h5>
@@ -23,7 +27,7 @@
 
 <script>
 export default {
-    props: ["title", "slug", "created_at"],
+    props: ["title", "slug", "thumbnail", "created_at"],
 };
 </script>
 

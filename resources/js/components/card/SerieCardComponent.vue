@@ -5,7 +5,7 @@
         >
             <div class="card border-0 bg-transparent px-1 m-auto mb-4">
                 <img
-                    src=""
+                    :src="thumbnail"
                     class="card-img-rounded"
                     width="100%"
                     height="201px"
@@ -44,7 +44,7 @@
 
 <script>
 export default {
-    props: ["name", "slug", "status", "tags", "created_at"],
+    props: ["name", "slug", "thumbnail", "status", "tags", "created_at"],
 };
 </script>
 

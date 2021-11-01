@@ -20,6 +20,7 @@ class SerieResource extends JsonResource
             'slug' => $this->slug,
             'status' => $this->status,
             'tag' => $this->tag,
+            'thumbnail' => asset('storage/img/'.$this->thumbnail),
             'created_at' => $this->created_at->format('d F Y'),
         ];
     }

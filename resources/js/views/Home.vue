@@ -11,6 +11,7 @@
                             :key="serie.slug"
                             :name="serie.name"
                             :status="serie.status"
+                            :thumbnail="serie.thumbnail"
                             :tags="serie.tag"
                             :created_at="serie.created_at"
                         ></seriecard-component>
