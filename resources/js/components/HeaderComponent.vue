@@ -51,29 +51,34 @@
                             shadow
                         "
                     >
-                        <ul
-                            class="
-                                d-flex
-                                align-items-center
-                                justify-content-center
-                            "
-                        >
-                            <form action="">
-                                <li class="ms-3">
+                        <form action="/topic">
+                            <ul
+                                class="
+                                    d-flex
+                                    align-items-center
+                                    justify-content-center
+                                "
+                            >
+                                <li
+                                    class="ms-3"
+                                    v-for="tag in tags"
+                                    :key="tag.slug"
+                                >
                                     <button
                                         name="tag"
-                                        value="sd"
+                                        :value="tag.slug"
                                         class="btn text-white"
-                                        style="background-color: red"
+                                        :style="'background-color:' + tag.color"
                                     >
                                         <i
-                                            class="fab fa-laravel d-block"
+                                            class="fab d-block"
+                                            :class="'fa-' + tag.icon"
                                             style="font-size: 20px"
                                         ></i>
                                     </button>
                                 </li>
-                            </form>
-                        </ul>
+                            </ul>
+                        </form>
                     </div>
                 </div>
                 <div class="col-lg-6 circle-container mt-5">
@@ -269,7 +274,19 @@
 </template>
 
 <script>
-export default {};
+export default {
+    data() {
+        return {
+            tags: [],
+        };
+    },
+
+    mounted() {
+        axios.get("/api/tag").then((response) => {
+            this.tags = response.data.data;
+        });
+    },
+};
 </script>
 
 <style></style>

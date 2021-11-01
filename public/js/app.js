@@ -5645,7 +5645,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      tags: []
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    axios.get("/api/tag").then(function (response) {
+      _this.tags = response.data.data;
+    });
+  }
+});
 
 /***/ }),
 
@@ -6906,6 +6924,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -7575,6 +7594,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
 //
 //
 //
@@ -29243,7 +29263,73 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "section",
+    { staticClass: "py-5 text-start header text-white position-relative" },
+    [
+      _c("div", { staticClass: "container-fluid" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-lg-6" }, [
+            _c("br"),
+            _c("br"),
+            _vm._v(" "),
+            _vm._m(0),
+            _vm._v(" "),
+            _vm._m(1),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c("small", [
+              _vm._v(
+                "\n                    Belajar pemrograman web, web design mobile app lengkap\n                    dari dasar untuk pemula sampai mahir, tersedia tutorial\n                    dengan studi kasus.\n                "
+              ),
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "\n                        header-path\n                        py-3\n                        position-absolute\n                        start-0\n                        end-0\n                        mx-5\n                        rounded\n                        shadow\n                    ",
+              },
+              [
+                _c("form", { attrs: { action: "/topic" } }, [
+                  _c(
+                    "ul",
+                    {
+                      staticClass:
+                        "\n                                d-flex\n                                align-items-center\n                                justify-content-center\n                            ",
+                    },
+                    _vm._l(_vm.tags, function (tag) {
+                      return _c("li", { key: tag.slug, staticClass: "ms-3" }, [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn text-white",
+                            style: "background-color:" + tag.color,
+                            attrs: { name: "tag", value: tag.slug },
+                          },
+                          [
+                            _c("i", {
+                              staticClass: "fab d-block",
+                              class: "fa-" + tag.icon,
+                              staticStyle: { "font-size": "20px" },
+                            }),
+                          ]
+                        ),
+                      ])
+                    }),
+                    0
+                  ),
+                ]),
+              ]
+            ),
+          ]),
+          _vm._v(" "),
+          _vm._m(2),
+        ]),
+      ]),
+    ]
+  )
 }
 var staticRenderFns = [
   function () {
@@ -29251,265 +29337,210 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c(
-      "section",
-      { staticClass: "py-5 text-start header text-white position-relative" },
+      "a",
+      {
+        staticClass:
+          "\n                        py-1\n                        px-3\n                        mt-5\n                        header-hot\n                        d-flex\n                        justify-content-between\n                        align-items-center\n                        text-white\n                        mb-4\n                    ",
+        attrs: { href: "" },
+      },
       [
-        _c("div", { staticClass: "container-fluid" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-lg-6" }, [
-              _c("br"),
-              _c("br"),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass:
-                    "\n                        py-1\n                        px-3\n                        mt-5\n                        header-hot\n                        d-flex\n                        justify-content-between\n                        align-items-center\n                        text-white\n                        mb-4\n                    ",
-                  attrs: { href: "" },
-                },
-                [
-                  _c("div", [
-                    _c("span", { staticClass: "badge bg-danger me-2" }, [
-                      _c("i", { staticClass: "fas fa-fire me-1" }),
-                      _vm._v(" HOT\n                        "),
-                    ]),
-                    _vm._v(" "),
-                    _c("small", [
-                      _vm._v(
-                        "\n                            Reedem untuk membuka seluruh tutorial\n                        "
-                      ),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("i", { staticClass: "fas fa-chevron-right" }),
-                ]
-              ),
-              _vm._v(" "),
-              _c("h1", { staticClass: "fw-light text-uppercase mt-3" }, [
-                _vm._v("\n                    Tempat Belajar "),
-                _c("b", [_vm._v("Programming ")]),
-                _vm._v(" yang Menyenangkan\n                    "),
-                _c("span", { staticClass: "fs-6", attrs: { id: "typed" } }),
-              ]),
-              _vm._v(" "),
-              _c("br"),
-              _vm._v(" "),
-              _c("small", [
-                _vm._v(
-                  "\n                    Belajar pemrograman web, web design mobile app lengkap\n                    dari dasar untuk pemula sampai mahir, tersedia tutorial\n                    dengan studi kasus.\n                "
-                ),
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "\n                        header-path\n                        py-3\n                        position-absolute\n                        start-0\n                        end-0\n                        mx-5\n                        rounded\n                        shadow\n                    ",
-                },
-                [
-                  _c(
-                    "ul",
-                    {
-                      staticClass:
-                        "\n                            d-flex\n                            align-items-center\n                            justify-content-center\n                        ",
-                    },
-                    [
-                      _c("form", { attrs: { action: "" } }, [
-                        _c("li", { staticClass: "ms-3" }, [
-                          _c(
-                            "button",
-                            {
-                              staticClass: "btn text-white",
-                              staticStyle: { "background-color": "red" },
-                              attrs: { name: "tag", value: "sd" },
-                            },
-                            [
-                              _c("i", {
-                                staticClass: "fab fa-laravel d-block",
-                                staticStyle: { "font-size": "20px" },
-                              }),
-                            ]
-                          ),
-                        ]),
-                      ]),
-                    ]
-                  ),
-                ]
-              ),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-lg-6 circle-container mt-5" }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "d-flex align-items-center justify-content-center",
-                },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "\n                            circle\n                            circle1\n                            position-absolute\n                            d-flex\n                            align-items-center\n                            justify-content-center\n                            rounded-circle\n                        ",
-                    },
-                    [
-                      _c(
-                        "span",
-                        {
-                          staticClass:
-                            "\n                                html\n                                position-absolute\n                                d-flex\n                                align-items-center\n                                justify-content-center\n                                rounded-circle\n                            ",
-                          attrs: {
-                            "data-bs-toggle": "tooltip",
-                            "data-bs-placement": "top",
-                            title: "HTML",
-                          },
-                        },
-                        [_c("i", { staticClass: "fab fa-html5" })]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        {
-                          staticClass:
-                            "\n                                css\n                                position-absolute\n                                d-flex\n                                align-items-center\n                                justify-content-center\n                                rounded-circle\n                            ",
-                          attrs: {
-                            "data-bs-toggle": "tooltip",
-                            "data-bs-placement": "top",
-                            title: "CSS",
-                          },
-                        },
-                        [_c("i", { staticClass: "fab fa-css3-alt" })]
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "\n                            circle\n                            circle2\n                            position-absolute\n                            d-flex\n                            align-items-center\n                            justify-content-center\n                            rounded-circle\n                        ",
-                    },
-                    [
-                      _c(
-                        "span",
-                        {
-                          staticClass:
-                            "\n                                js\n                                position-absolute\n                                d-flex\n                                align-items-center\n                                justify-content-center\n                                rounded-circle\n                            ",
-                          attrs: {
-                            "data-bs-toggle": "tooltip",
-                            "data-bs-placement": "top",
-                            title: "Javascript",
-                          },
-                        },
-                        [_c("i", { staticClass: "fab fa-js" })]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        {
-                          staticClass:
-                            "\n                                php\n                                position-absolute\n                                d-flex\n                                align-items-center\n                                justify-content-center\n                                rounded-circle\n                            ",
-                          attrs: {
-                            "data-bs-toggle": "tooltip",
-                            "data-bs-placement": "top",
-                            title: "PHP",
-                          },
-                        },
-                        [
-                          _c("i", {
-                            staticClass:
-                              "\n                                    fab\n                                    fa-php\n                                    position-absolute\n                                    d-flex\n                                    align-items-center\n                                    justify-content-center\n                                    rounded-circle\n                                ",
-                          }),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        {
-                          staticClass:
-                            "\n                                sass\n                                position-absolute\n                                d-flex\n                                align-items-center\n                                justify-content-center\n                                rounded-circle\n                            ",
-                          attrs: {
-                            "data-bs-toggle": "tooltip",
-                            "data-bs-placement": "top",
-                            title: "Sass",
-                          },
-                        },
-                        [_c("i", { staticClass: "fab fa-sass" })]
-                      ),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "\n                            circle\n                            circle3\n                            position-absolute\n                            d-flex\n                            align-items-center\n                            justify-content-center\n                            rounded-circle\n                        ",
-                    },
-                    [
-                      _c(
-                        "span",
-                        {
-                          staticClass:
-                            "\n                                laravel\n                                position-absolute\n                                d-flex\n                                align-items-center\n                                justify-content-center\n                                rounded-circle\n                            ",
-                          attrs: {
-                            "data-bs-toggle": "tooltip",
-                            "data-bs-placement": "top",
-                            title: "Laravel",
-                          },
-                        },
-                        [_c("i", { staticClass: "fab fa-laravel" })]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        {
-                          staticClass:
-                            "\n                                vue\n                                position-absolute\n                                d-flex\n                                align-items-center\n                                justify-content-center\n                                rounded-circle\n                            ",
-                          attrs: {
-                            "data-bs-toggle": "tooltip",
-                            "data-bs-placement": "top",
-                            title: "VueJs",
-                          },
-                        },
-                        [_c("i", { staticClass: "fab fa-vuejs" })]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        {
-                          staticClass:
-                            "\n                                react\n                                position-absolute\n                                d-flex\n                                align-items-center\n                                justify-content-center\n                                rounded-circle\n                            ",
-                          attrs: {
-                            "data-bs-toggle": "tooltip",
-                            "data-bs-placement": "top",
-                            title: "ReactJs",
-                          },
-                        },
-                        [_c("i", { staticClass: "fab fa-react" })]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "span",
-                        {
-                          staticClass:
-                            "\n                                node\n                                position-absolute\n                                d-flex\n                                align-items-center\n                                justify-content-center\n                                rounded-circle\n                            ",
-                          attrs: {
-                            "data-bs-toggle": "tooltip",
-                            "data-bs-placement": "top",
-                            title: "NodeJs",
-                          },
-                        },
-                        [_c("i", { staticClass: "fab fa-node-js" })]
-                      ),
-                    ]
-                  ),
-                ]
-              ),
-            ]),
+        _c("div", [
+          _c("span", { staticClass: "badge bg-danger me-2" }, [
+            _c("i", { staticClass: "fas fa-fire me-1" }),
+            _vm._v(" HOT\n                        "),
+          ]),
+          _vm._v(" "),
+          _c("small", [
+            _vm._v(
+              "\n                            Reedem untuk membuka seluruh tutorial\n                        "
+            ),
           ]),
         ]),
+        _vm._v(" "),
+        _c("i", { staticClass: "fas fa-chevron-right" }),
       ]
     )
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h1", { staticClass: "fw-light text-uppercase mt-3" }, [
+      _vm._v("\n                    Tempat Belajar "),
+      _c("b", [_vm._v("Programming ")]),
+      _vm._v(" yang Menyenangkan\n                    "),
+      _c("span", { staticClass: "fs-6", attrs: { id: "typed" } }),
+    ])
+  },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-6 circle-container mt-5" }, [
+      _c(
+        "div",
+        { staticClass: "d-flex align-items-center justify-content-center" },
+        [
+          _c(
+            "div",
+            {
+              staticClass:
+                "\n                            circle\n                            circle1\n                            position-absolute\n                            d-flex\n                            align-items-center\n                            justify-content-center\n                            rounded-circle\n                        ",
+            },
+            [
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "\n                                html\n                                position-absolute\n                                d-flex\n                                align-items-center\n                                justify-content-center\n                                rounded-circle\n                            ",
+                  attrs: {
+                    "data-bs-toggle": "tooltip",
+                    "data-bs-placement": "top",
+                    title: "HTML",
+                  },
+                },
+                [_c("i", { staticClass: "fab fa-html5" })]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "\n                                css\n                                position-absolute\n                                d-flex\n                                align-items-center\n                                justify-content-center\n                                rounded-circle\n                            ",
+                  attrs: {
+                    "data-bs-toggle": "tooltip",
+                    "data-bs-placement": "top",
+                    title: "CSS",
+                  },
+                },
+                [_c("i", { staticClass: "fab fa-css3-alt" })]
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "\n                            circle\n                            circle2\n                            position-absolute\n                            d-flex\n                            align-items-center\n                            justify-content-center\n                            rounded-circle\n                        ",
+            },
+            [
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "\n                                js\n                                position-absolute\n                                d-flex\n                                align-items-center\n                                justify-content-center\n                                rounded-circle\n                            ",
+                  attrs: {
+                    "data-bs-toggle": "tooltip",
+                    "data-bs-placement": "top",
+                    title: "Javascript",
+                  },
+                },
+                [_c("i", { staticClass: "fab fa-js" })]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "\n                                php\n                                position-absolute\n                                d-flex\n                                align-items-center\n                                justify-content-center\n                                rounded-circle\n                            ",
+                  attrs: {
+                    "data-bs-toggle": "tooltip",
+                    "data-bs-placement": "top",
+                    title: "PHP",
+                  },
+                },
+                [
+                  _c("i", {
+                    staticClass:
+                      "\n                                    fab\n                                    fa-php\n                                    position-absolute\n                                    d-flex\n                                    align-items-center\n                                    justify-content-center\n                                    rounded-circle\n                                ",
+                  }),
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "\n                                sass\n                                position-absolute\n                                d-flex\n                                align-items-center\n                                justify-content-center\n                                rounded-circle\n                            ",
+                  attrs: {
+                    "data-bs-toggle": "tooltip",
+                    "data-bs-placement": "top",
+                    title: "Sass",
+                  },
+                },
+                [_c("i", { staticClass: "fab fa-sass" })]
+              ),
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "\n                            circle\n                            circle3\n                            position-absolute\n                            d-flex\n                            align-items-center\n                            justify-content-center\n                            rounded-circle\n                        ",
+            },
+            [
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "\n                                laravel\n                                position-absolute\n                                d-flex\n                                align-items-center\n                                justify-content-center\n                                rounded-circle\n                            ",
+                  attrs: {
+                    "data-bs-toggle": "tooltip",
+                    "data-bs-placement": "top",
+                    title: "Laravel",
+                  },
+                },
+                [_c("i", { staticClass: "fab fa-laravel" })]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "\n                                vue\n                                position-absolute\n                                d-flex\n                                align-items-center\n                                justify-content-center\n                                rounded-circle\n                            ",
+                  attrs: {
+                    "data-bs-toggle": "tooltip",
+                    "data-bs-placement": "top",
+                    title: "VueJs",
+                  },
+                },
+                [_c("i", { staticClass: "fab fa-vuejs" })]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "\n                                react\n                                position-absolute\n                                d-flex\n                                align-items-center\n                                justify-content-center\n                                rounded-circle\n                            ",
+                  attrs: {
+                    "data-bs-toggle": "tooltip",
+                    "data-bs-placement": "top",
+                    title: "ReactJs",
+                  },
+                },
+                [_c("i", { staticClass: "fab fa-react" })]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  staticClass:
+                    "\n                                node\n                                position-absolute\n                                d-flex\n                                align-items-center\n                                justify-content-center\n                                rounded-circle\n                            ",
+                  attrs: {
+                    "data-bs-toggle": "tooltip",
+                    "data-bs-placement": "top",
+                    title: "NodeJs",
+                  },
+                },
+                [_c("i", { staticClass: "fab fa-node-js" })]
+              ),
+            ]
+          ),
+        ]
+      ),
+    ])
   },
 ]
 render._withStripped = true
@@ -30265,7 +30296,7 @@ var render = function () {
           _vm._l(_vm.articles, function (article) {
             return _c(
               "div",
-              { key: article.slug, staticClass: "col-md-4 mb-4" },
+              { key: article.slug, staticClass: "col-md-3 mb-4" },
               [
                 _c("articlecard-component", {
                   attrs: {
@@ -30801,6 +30832,7 @@ var render = function () {
                     key: serie.slug,
                     attrs: {
                       name: serie.name,
+                      slug: serie.slug,
                       status: serie.status,
                       thumbnail: serie.thumbnail,
                       tags: serie.tag,
@@ -32158,6 +32190,7 @@ var render = function () {
               key: serie.slug,
               attrs: {
                 name: serie.name,
+                slug: serie.slug,
                 thumbnail: serie.thumbnail,
                 status: serie.status,
                 tags: serie.tag,

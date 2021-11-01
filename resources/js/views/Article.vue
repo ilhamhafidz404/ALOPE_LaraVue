@@ -49,7 +49,7 @@
             <div class="card p-4 shadow position-relative">
                 <div class="row mt-4">
                     <div
-                        class="col-md-4 mb-4"
+                        class="col-md-3 mb-4"
                         v-for="article in articles"
                         :key="article.slug"
                     >

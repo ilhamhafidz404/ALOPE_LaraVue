@@ -10,6 +10,7 @@
                             v-for="serie in series"
                             :key="serie.slug"
                             :name="serie.name"
+                            :slug="serie.slug"
                             :status="serie.status"
                             :thumbnail="serie.thumbnail"
                             :tags="serie.tag"
