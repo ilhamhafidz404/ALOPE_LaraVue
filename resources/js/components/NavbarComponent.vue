@@ -19,13 +19,12 @@
                 <ul class="navbar-nav ms-auto">
                     <!-- @auth -->
                     <li class="nav-item">
-                        <!-- <router-link class="nav-link" exact to="/"
-                            >
+                        <router-link class="nav-link" exact to="/">
                             Beranda</router-link
-                        > -->
-                        <a href="/" class="nav-link">
+                        >
+                        <!-- <a href="/" class="nav-link">
                             <i class="fas fa-home"></i>
-                        </a>
+                        </a> -->
                     </li>
                     <li class="nav-item">
                         <router-link class="nav-link" :to="{ name: 'article' }">

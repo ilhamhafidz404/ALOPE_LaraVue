@@ -13,6 +13,7 @@ try {
 import Vue from "vue";
 import VueRouter from "vue-router";
 import VueDisqus from "vue-disqus";
+import "vue-glide-js/dist/vue-glide.css";
 
 Vue.use(VueRouter);
 import routes from "./routes/routes";
@@ -45,6 +46,10 @@ Vue.component(
 Vue.component(
     "seriecard-component",
     require("./components/card/SerieCardComponent.vue").default
+);
+Vue.component(
+    "glide-component",
+    require("./components/GlideComponent.vue").default
 );
 
 Vue.component(

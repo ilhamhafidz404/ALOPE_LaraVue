@@ -19,7 +19,8 @@
                     </div>
                 </div>
             </div>
-            <glider-component></glider-component>
+            <glide-component></glide-component>
+            <!-- <glider-component></glider-component> -->
             <testimoni-component></testimoni-component>
 
             <div id="pricing" class="m-auto container-fluid">
